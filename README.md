@@ -6,3 +6,4 @@ Ring0/-1/-2 (Kernel/HyperVisor/SMM) mode available for purchase since they are u
  - Hides/Protects Process/Driver  
  - Falsify Registry Data  
  - Path Modification for Drivers  
+ - Falsify System Hooks
