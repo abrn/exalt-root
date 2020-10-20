@@ -19,11 +19,11 @@ internal class ObjectTracker
 	// Token: 0x06000509 RID: 1289 RVA: 0x0001DC50 File Offset: 0x0001BE50
 	public void MapInfo(MapInfoPacket mapInfo)
 	{
-		this._6cnIerYhzZda8dwMKe0N21tnsKG = mapInfo._pCEEx7DVSfoKsVtOFqw3jIq365d;
-		this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.MapWidth = mapInfo._pCEEx7DVSfoKsVtOFqw3jIq365d;
-		this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.MapHeight = mapInfo._92R8iOIVdqdeKvPcqUJAUojZv04;
-		this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.MapName = mapInfo._Jp3DtIV4aAYZY26sVsXpPQjBRGO;
-		this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Tiles = new Square[mapInfo._pCEEx7DVSfoKsVtOFqw3jIq365d * mapInfo._92R8iOIVdqdeKvPcqUJAUojZv04];
+		this._6cnIerYhzZda8dwMKe0N21tnsKG = mapInfo.Width;
+		this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.MapWidth = mapInfo.Width;
+		this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.MapHeight = mapInfo.Height;
+		this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.MapName = mapInfo.Name;
+		this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Tiles = new Square[mapInfo.Width * mapInfo.Height];
 		this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Players.Clear();
 		this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Enemies.Clear();
 		this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Objects.Clear();
@@ -53,9 +53,9 @@ internal class ObjectTracker
 	// Token: 0x0600050C RID: 1292 RVA: 0x0001DDA4 File Offset: 0x0001BFA4
 	public void Update(UpdatePacket update)
 	{
-		foreach (_hVYZnKlD1p4NKgHvEIulwTgi91f hVYZnKlD1p4NKgHvEIulwTgi91f in update._ggcOirasY7xrclnb5yxgWCbeJam)
+		foreach (Tile hVYZnKlD1p4NKgHvEIulwTgi91f in update.Tiles)
 		{
-			this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Tiles[(int)hVYZnKlD1p4NKgHvEIulwTgi91f._MFEyfKFQqtcdaBxZbAOPzXMB8iP * this._6cnIerYhzZda8dwMKe0N21tnsKG + (int)hVYZnKlD1p4NKgHvEIulwTgi91f._vwAmCOilfBfnOBAh94J77UFd0FV] = new Square(_JzyrOApzC09RC3fmb10FDURmyCl.Tiles.ByID(hVYZnKlD1p4NKgHvEIulwTgi91f._k9uWQCZd8WqDr6yiKRmrLtst3KX), hVYZnKlD1p4NKgHvEIulwTgi91f._MFEyfKFQqtcdaBxZbAOPzXMB8iP, hVYZnKlD1p4NKgHvEIulwTgi91f._vwAmCOilfBfnOBAh94J77UFd0FV, hVYZnKlD1p4NKgHvEIulwTgi91f._k9uWQCZd8WqDr6yiKRmrLtst3KX);
+			this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Tiles[(int)hVYZnKlD1p4NKgHvEIulwTgi91f.X * this._6cnIerYhzZda8dwMKe0N21tnsKG + (int)hVYZnKlD1p4NKgHvEIulwTgi91f.Y] = new Square(_JzyrOApzC09RC3fmb10FDURmyCl.Tiles.ByID(hVYZnKlD1p4NKgHvEIulwTgi91f.Type), hVYZnKlD1p4NKgHvEIulwTgi91f.X, hVYZnKlD1p4NKgHvEIulwTgi91f.Y, hVYZnKlD1p4NKgHvEIulwTgi91f.Type);
 		}
 		Entity[] jyJGMVpAZL4M3WPGiyvdnxz1cTH = update.NewObjs;
 		int i = 0;
@@ -63,11 +63,11 @@ internal class ObjectTracker
 		{
 			Entity eTOyUHUGABMgTlUf3FUyHRn1uVv = jyJGMVpAZL4M3WPGiyvdnxz1cTH[i];
 			GameObject dbvvb43n9c5uNQ7JklPD1fnCEnv = new GameObject(eTOyUHUGABMgTlUf3FUyHRn1uVv);
-			if (dbvvb43n9c5uNQ7JklPD1fnCEnv._Zfx7ZfyZsrOtjl3lIHaVkBDWPNH)
+			if (dbvvb43n9c5uNQ7JklPD1fnCEnv.Enemy)
 			{
 				goto IL_175;
 			}
-			if (dbvvb43n9c5uNQ7JklPD1fnCEnv._50Ms1zsqax9Ua48PaWMPQfIENYb)
+			if (dbvvb43n9c5uNQ7JklPD1fnCEnv.Player)
 			{
 				if (this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Players.ContainsKey(eTOyUHUGABMgTlUf3FUyHRn1uVv.Status.ObjectId))
 				{
@@ -136,7 +136,7 @@ internal class ObjectTracker
 		{
 			if (this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Objects.ContainsKey(seOURj9wT08Ssc6bZOctUjk0KXi.ObjectId))
 			{
-				this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Objects[seOURj9wT08Ssc6bZOctUjk0KXi.ObjectId]._Se7aqnZW3CHDIceb2hAge7QmcPY(seOURj9wT08Ssc6bZOctUjk0KXi, newTick._O8ZPS6Ibh455w0oY1jBdktfRWIA, newTick._AKwrGdNlyCcdoE29BXWWchVg2fJ, newTick._AKwrGdNlyCcdoE29BXWWchVg2fJ, (long)this._y197qHnAdnQHPqX30R0Bq0tjIOcA, false);
+				this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Objects[seOURj9wT08Ssc6bZOctUjk0KXi.ObjectId].ParseStatus(seOURj9wT08Ssc6bZOctUjk0KXi, newTick.TickTime, newTick.TickId, newTick.TickId, (long)this._y197qHnAdnQHPqX30R0Bq0tjIOcA, false);
 			}
 		}
 	}
@@ -147,7 +147,7 @@ internal class ObjectTracker
 		this._y197qHnAdnQHPqX30R0Bq0tjIOcA = Environment.TickCount;
 		if (this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Player != null)
 		{
-			this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Player._G6mmnFaa6rCvH24Jwj69ERi78ww = move._l6SobSknmpzcoMgQdVhaWNqcv8D;
+			this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Player.ClientPosition = move.NewPosition;
 		}
 	}
 
@@ -166,12 +166,12 @@ internal class ObjectTracker
 				"Unable to find enemy type in map, enemytype: ",
 				dbvvb43n9c5uNQ7JklPD1fnCEnv.ObjectType.ToString(),
 				" (",
-				dbvvb43n9c5uNQ7JklPD1fnCEnv._aN5iXUMyRRH5dqciRi77IpySUoh,
+				dbvvb43n9c5uNQ7JklPD1fnCEnv.TypeName,
 				")"
 			}));
 			return;
 		}
-		Dictionary<byte, ProjectileStructure> dictionary = Projectile.ObjectTypeToProjectileIdStructureMap[(int)dbvvb43n9c5uNQ7JklPD1fnCEnv.ObjectType];
+        Dictionary<byte, ExaltMultiTool.Proxy.DataStructures.ProjectileStructure> dictionary = Projectile.ObjectTypeToProjectileIdStructureMap[(int)dbvvb43n9c5uNQ7JklPD1fnCEnv.ObjectType];
 		if (dictionary.ContainsKey(enemyShoot._U7AZyGcFQm4AJLAEAuhbwgnobvG))
 		{
 			Dictionary<int, Projectile> dictionary2;
@@ -184,7 +184,7 @@ internal class ObjectTracker
 			{
 				dictionary2 = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.projectiles[enemyShoot._o1vIAcFEkLsw697hhlSgXnC4w9g];
 			}
-			ProjectileStructure structure = dictionary[enemyShoot._U7AZyGcFQm4AJLAEAuhbwgnobvG];
+            ExaltMultiTool.Proxy.DataStructures.ProjectileStructure structure = dictionary[enemyShoot._U7AZyGcFQm4AJLAEAuhbwgnobvG];
 			for (int i = 0; i < (int)enemyShoot._iJYXKz0RNaSBkr15qJpRokSEGeT; i++)
 			{
 				byte b = (byte)(((int)enemyShoot._0v4mmgyFOmt9eSc23UclkqyBncC + i) % 256);
@@ -210,7 +210,7 @@ internal class ObjectTracker
 			"Unable to find enemy projectile type in map, enemytype: ",
 			dbvvb43n9c5uNQ7JklPD1fnCEnv.ObjectType.ToString(),
 			" (",
-			dbvvb43n9c5uNQ7JklPD1fnCEnv._aN5iXUMyRRH5dqciRi77IpySUoh,
+			dbvvb43n9c5uNQ7JklPD1fnCEnv.TypeName,
 			")"
 		}));
 	}

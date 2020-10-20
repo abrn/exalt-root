@@ -22,10 +22,10 @@ internal class _CuAD5qOVhedsxfPCkSon6261zEK : Packet
 		this._c4R0LoUbfFhG40BLrsey7k3iafD = r.ReadInt32();
 		this._605Ligxeaj9k9kBV8zQhhFhgTGl = r.ReadInt32();
 		this._GbtHysMRPoKlTOMs7qbMI8m9BjB = r.ReadByte();
-		this._U2kEAqSUtjhVX3xjQLvVslmigEE = new _A3HGGdSvVENqKj3O1HGYDO3Qh8C[(int)r.ReadInt16()];
+		this._U2kEAqSUtjhVX3xjQLvVslmigEE = new SlotObject[(int)r.ReadInt16()];
 		for (int i = 0; i < this._U2kEAqSUtjhVX3xjQLvVslmigEE.Length; i++)
 		{
-			this._U2kEAqSUtjhVX3xjQLvVslmigEE[i] = new _A3HGGdSvVENqKj3O1HGYDO3Qh8C(r);
+			this._U2kEAqSUtjhVX3xjQLvVslmigEE[i] = new SlotObject(r);
 		}
 	}
 
@@ -38,7 +38,7 @@ internal class _CuAD5qOVhedsxfPCkSon6261zEK : Packet
 		w.Write(this._605Ligxeaj9k9kBV8zQhhFhgTGl);
 		w.Write(this._GbtHysMRPoKlTOMs7qbMI8m9BjB);
 		w.Write((short)this._U2kEAqSUtjhVX3xjQLvVslmigEE.Length);
-		_A3HGGdSvVENqKj3O1HGYDO3Qh8C[] u2kEAqSUtjhVX3xjQLvVslmigEE = this._U2kEAqSUtjhVX3xjQLvVslmigEE;
+		SlotObject[] u2kEAqSUtjhVX3xjQLvVslmigEE = this._U2kEAqSUtjhVX3xjQLvVslmigEE;
 		for (int i = 0; i < u2kEAqSUtjhVX3xjQLvVslmigEE.Length; i++)
 		{
 			u2kEAqSUtjhVX3xjQLvVslmigEE[i].Write(w);
@@ -70,5 +70,5 @@ internal class _CuAD5qOVhedsxfPCkSon6261zEK : Packet
 	public byte _GbtHysMRPoKlTOMs7qbMI8m9BjB;
 
 	// Token: 0x040004B2 RID: 1202
-	public _A3HGGdSvVENqKj3O1HGYDO3Qh8C[] _U2kEAqSUtjhVX3xjQLvVslmigEE;
+	public SlotObject[] _U2kEAqSUtjhVX3xjQLvVslmigEE;
 }

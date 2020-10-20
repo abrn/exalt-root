@@ -88,7 +88,7 @@ internal static class _IHUllfO6Rr4ri1gTkx9LNb4zz7B
 
 	// Token: 0x06000042 RID: 66
 	[DllImport("user32.dll")]
-	private static extern bool GetClientRect(IntPtr hWnd, ref _IHUllfO6Rr4ri1gTkx9LNb4zz7B._J2E8Iynpnq6BAFcoSJPcixqVsgo lpRect);
+	private static extern bool GetClientRect(IntPtr hWnd, ref _IHUllfO6Rr4ri1gTkx9LNb4zz7B.Pos lpRect);
 
 	// Token: 0x06000043 RID: 67
 	[DllImport("user32.dll")]
@@ -107,22 +107,22 @@ internal static class _IHUllfO6Rr4ri1gTkx9LNb4zz7B
 	public static extern int GetWindowThreadProcessId(IntPtr hWnd, out int processId);
 
 	// Token: 0x06000047 RID: 71 RVA: 0x0000AAF4 File Offset: 0x00008CF4
-	public static Size _RE4g2xvBXFWHCUkCKK2warJbimcA(IntPtr h)
+	public static Size getSize(IntPtr h)
 	{
-		_IHUllfO6Rr4ri1gTkx9LNb4zz7B._J2E8Iynpnq6BAFcoSJPcixqVsgo j2E8Iynpnq6BAFcoSJPcixqVsgo = default(_IHUllfO6Rr4ri1gTkx9LNb4zz7B._J2E8Iynpnq6BAFcoSJPcixqVsgo);
-		_IHUllfO6Rr4ri1gTkx9LNb4zz7B.GetClientRect(h, ref j2E8Iynpnq6BAFcoSJPcixqVsgo);
+        Pos pos = default(Pos);
+        GetClientRect(h, ref pos);
 		return new Size
 		{
-			Width = j2E8Iynpnq6BAFcoSJPcixqVsgo._sfnq9beK6WzaJtSSUcCdapuQ4AF - j2E8Iynpnq6BAFcoSJPcixqVsgo._8wCra5hksnvINkRvJ1QtGUzhFMg,
-			Height = j2E8Iynpnq6BAFcoSJPcixqVsgo._rkkF0aEIKnNUEJ1ISVsbd5p4hlf - j2E8Iynpnq6BAFcoSJPcixqVsgo._WoT5aCONnK1l1ea0Hc7ByNNhbMq
+			Width = pos.right - pos.left,
+			Height = pos.bottom - pos.top
 		};
 	}
 
 	// Token: 0x06000048 RID: 72 RVA: 0x0000AB44 File Offset: 0x00008D44
-	public static Point _OhwP6uwqSCRaiSubuVqfqXM17Et(IntPtr h)
+	public static Point point(IntPtr h)
 	{
 		Point empty = Point.Empty;
-		_IHUllfO6Rr4ri1gTkx9LNb4zz7B.ClientToScreen(h, ref empty);
+        ClientToScreen(h, ref empty);
 		return empty;
 	}
 
@@ -292,27 +292,27 @@ internal static class _IHUllfO6Rr4ri1gTkx9LNb4zz7B
 	}
 
 	// Token: 0x0200000E RID: 14
-	private struct _J2E8Iynpnq6BAFcoSJPcixqVsgo
+	private struct Pos
 	{
 		// Token: 0x06000049 RID: 73 RVA: 0x0000AB64 File Offset: 0x00008D64
-		internal _J2E8Iynpnq6BAFcoSJPcixqVsgo(int left, int top, int right, int bottom)
+		internal Pos(int left, int top, int right, int bottom)
 		{
-			this._8wCra5hksnvINkRvJ1QtGUzhFMg = left;
-			this._WoT5aCONnK1l1ea0Hc7ByNNhbMq = top;
-			this._sfnq9beK6WzaJtSSUcCdapuQ4AF = right;
-			this._rkkF0aEIKnNUEJ1ISVsbd5p4hlf = bottom;
+			this.left = left;
+			this.top = top;
+			this.right = right;
+			this.bottom = bottom;
 		}
 
 		// Token: 0x040000E6 RID: 230
-		public int _8wCra5hksnvINkRvJ1QtGUzhFMg;
+		public int left;
 
 		// Token: 0x040000E7 RID: 231
-		public int _WoT5aCONnK1l1ea0Hc7ByNNhbMq;
+		public int top;
 
 		// Token: 0x040000E8 RID: 232
-		public int _sfnq9beK6WzaJtSSUcCdapuQ4AF;
+		public int right;
 
 		// Token: 0x040000E9 RID: 233
-		public int _rkkF0aEIKnNUEJ1ISVsbd5p4hlf;
+		public int bottom;
 	}
 }

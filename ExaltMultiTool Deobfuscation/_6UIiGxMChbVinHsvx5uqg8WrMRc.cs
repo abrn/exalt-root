@@ -2,7 +2,7 @@
 using ExaltMultiTool.Proxy.Networking.Packets;
 
 // Token: 0x02000080 RID: 128
-internal class _6UIiGxMChbVinHsvx5uqg8WrMRc : Packet
+internal class InvResultPacket : Packet
 {
 	// Token: 0x17000119 RID: 281
 	// (get) Token: 0x060003D4 RID: 980 RVA: 0x00015780 File Offset: 0x00013980
@@ -18,8 +18,8 @@ internal class _6UIiGxMChbVinHsvx5uqg8WrMRc : Packet
 	public override void Read(PacketReader r)
 	{
 		this._9WVS8mgAGMXsp1FYvKoly56WY1E = r.ReadBoolean();
-		this._ecyyaYf6RV1NPdHtzXFXLG5mpFA = new _A3HGGdSvVENqKj3O1HGYDO3Qh8C(r);
-		this._R1rVnNom2O6z6ToODjdI248Gp3O = new _A3HGGdSvVENqKj3O1HGYDO3Qh8C(r);
+		this._ecyyaYf6RV1NPdHtzXFXLG5mpFA = new SlotObject(r);
+		this._R1rVnNom2O6z6ToODjdI248Gp3O = new SlotObject(r);
 	}
 
 	// Token: 0x060003D6 RID: 982 RVA: 0x000157C4 File Offset: 0x000139C4
@@ -34,8 +34,8 @@ internal class _6UIiGxMChbVinHsvx5uqg8WrMRc : Packet
 	public bool _9WVS8mgAGMXsp1FYvKoly56WY1E;
 
 	// Token: 0x04000511 RID: 1297
-	public _A3HGGdSvVENqKj3O1HGYDO3Qh8C _ecyyaYf6RV1NPdHtzXFXLG5mpFA;
+	public SlotObject _ecyyaYf6RV1NPdHtzXFXLG5mpFA;
 
 	// Token: 0x04000512 RID: 1298
-	public _A3HGGdSvVENqKj3O1HGYDO3Qh8C _R1rVnNom2O6z6ToODjdI248Gp3O;
+	public SlotObject _R1rVnNom2O6z6ToODjdI248Gp3O;
 }

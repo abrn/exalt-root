@@ -39,7 +39,7 @@ namespace ExaltMultiTool.Proxy.Mods
 		private static readonly Dictionary<int, List<byte>> _RS7ECM4syjDMcDi9C2P1wckI5NC = new Dictionary<int, List<byte>>();
 
 		// Token: 0x0400061C RID: 1564
-		public static readonly Dictionary<int, Dictionary<byte, ProjectileStructure>> ObjectTypeToProjectileIdStructureMap = new Dictionary<int, Dictionary<byte, ProjectileStructure>>();
+		public static readonly Dictionary<int, Dictionary<byte, DataStructures.ProjectileStructure>> ObjectTypeToProjectileIdStructureMap = new Dictionary<int, Dictionary<byte, DataStructures.ProjectileStructure>>();
 
 		// Token: 0x0400061D RID: 1565
 		private static bool _cyQJ3BPOBkCkecKQAOsnTodLn1B = false;
@@ -57,7 +57,7 @@ namespace ExaltMultiTool.Proxy.Mods
 		public int Damage;
 
 		// Token: 0x04000622 RID: 1570
-		public ProjectileStructure Structure;
+		public DataStructures.ProjectileStructure Structure;
 
 		// Token: 0x020000BC RID: 188
 		[CompilerGenerated]
@@ -67,14 +67,14 @@ namespace ExaltMultiTool.Proxy.Mods
 			// Token: 0x06000516 RID: 1302 RVA: 0x0001E474 File Offset: 0x0001C674
 			internal void _TlnzzvIayGLgCMcrEZ3iUFL9YnP(ObjectStructure enemy)
 			{
-				if (!enemy.Projectiles.Any<ProjectileStructure>())
+				if (!enemy.Projectiles.Any())
 				{
 					return;
 				}
 				List<byte> list = new List<byte>();
 				List<byte> list2 = new List<byte>();
-				Dictionary<byte, ProjectileStructure> dictionary = new Dictionary<byte, ProjectileStructure>();
-				foreach (ProjectileStructure projectileStructure in enemy.Projectiles)
+                Dictionary<byte, DataStructures.ProjectileStructure> dictionary = new Dictionary<byte, DataStructures.ProjectileStructure>();
+				foreach (DataStructures.ProjectileStructure projectileStructure in enemy.Projectiles)
 				{
 					if (projectileStructure.ArmorPiercing)
 					{

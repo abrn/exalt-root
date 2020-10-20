@@ -73,8 +73,8 @@ Parameter name: length
 	// Token: 0x060004B0 RID: 1200 RVA: 0x0001AA00 File Offset: 0x00018C00
 	public void MapInfo(MapInfoPacket mapInfo)
 	{
-		this._2quYVWYoLc77QY6uJhajp7qBEFF = this._D0ydY92aMnivKXLmhWYnzjIuo7b.Contains(mapInfo._Jp3DtIV4aAYZY26sVsXpPQjBRGO);
-		this._L4etETbJCIQekDr3Sm4dM67NyC = (mapInfo._Jp3DtIV4aAYZY26sVsXpPQjBRGO == "Ocean Trench");
+		this._2quYVWYoLc77QY6uJhajp7qBEFF = this._D0ydY92aMnivKXLmhWYnzjIuo7b.Contains(mapInfo.Name);
+		this._L4etETbJCIQekDr3Sm4dM67NyC = (mapInfo.Name == "Ocean Trench");
 		this._KgvAv7C8BPHRhNGaBUY9WAoRFFU = null;
 		this._wIV6RuTHp6K14hjsabfqulJm6RB = 100;
 		this._dTFvDKmJDtcJzyy5wFAsDubOP2x = 100;
@@ -108,7 +108,7 @@ Parameter name: length
 			}
 			if (!this._6HhWgr0VLGFSNUy8ZkAyxO8zznB.ContainsKey(eTOyUHUGABMgTlUf3FUyHRn1uVv.Status.ObjectId))
 			{
-				this._6HhWgr0VLGFSNUy8ZkAyxO8zznB.Add(eTOyUHUGABMgTlUf3FUyHRn1uVv.Status.ObjectId, eTOyUHUGABMgTlUf3FUyHRn1uVv._koPitlGqCPegcnIS2B6efWzp4zO);
+				this._6HhWgr0VLGFSNUy8ZkAyxO8zznB.Add(eTOyUHUGABMgTlUf3FUyHRn1uVv.Status.ObjectId, eTOyUHUGABMgTlUf3FUyHRn1uVv.ObjectType);
 			}
 		}
 	}
@@ -152,7 +152,7 @@ Parameter name: length
 					}
 					else if (!StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType.Effects))
 					{
-						if (StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType._Vn1UXDYsa7sb8qGDESMjPifFRtx))
+						if (StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType.Effects2))
 						{
 							this._ebyfk31Ab9aj569ppNj1fwNxyUG = ((eawaZQvtvbptP3yFgHw8DNBicDZ.IntValue & 536870912) == 536870912);
 						}
@@ -188,14 +188,14 @@ Parameter name: length
 		if (move.TickId == 0)
 		{
 			this._y197qHnAdnQHPqX30R0Bq0tjIOcA = move._Nx46RcGIU0H1BCGWaJXjN1ieopt;
-			this._9uQC3m47mudh1sCSmEtgs0EPXSo(move._Nx46RcGIU0H1BCGWaJXjN1ieopt, 0, move._l6SobSknmpzcoMgQdVhaWNqcv8D);
+			this._9uQC3m47mudh1sCSmEtgs0EPXSo(move._Nx46RcGIU0H1BCGWaJXjN1ieopt, 0, move.NewPosition);
 		}
 		else
 		{
-			this._9uQC3m47mudh1sCSmEtgs0EPXSo(move._Nx46RcGIU0H1BCGWaJXjN1ieopt, move._Nx46RcGIU0H1BCGWaJXjN1ieopt - this._y197qHnAdnQHPqX30R0Bq0tjIOcA, move._l6SobSknmpzcoMgQdVhaWNqcv8D);
+			this._9uQC3m47mudh1sCSmEtgs0EPXSo(move._Nx46RcGIU0H1BCGWaJXjN1ieopt, move._Nx46RcGIU0H1BCGWaJXjN1ieopt - this._y197qHnAdnQHPqX30R0Bq0tjIOcA, move.NewPosition);
 			this._y197qHnAdnQHPqX30R0Bq0tjIOcA = move._Nx46RcGIU0H1BCGWaJXjN1ieopt;
 		}
-		this._0qPs3ICAiKqEpockvHdkXyWtLLK = move._l6SobSknmpzcoMgQdVhaWNqcv8D;
+		this._0qPs3ICAiKqEpockvHdkXyWtLLK = move.NewPosition;
 	}
 
 	// Token: 0x060004B6 RID: 1206 RVA: 0x0001ADCC File Offset: 0x00018FCC
@@ -239,20 +239,20 @@ Parameter name: length
 	}
 
 	// Token: 0x060004B7 RID: 1207 RVA: 0x0001AEB0 File Offset: 0x000190B0
-	public void _ZHfjECn2B9JJHnVF67eBaO57JUp(_maJp2qic3r54gk5Eg1eeMowxvXh invSwap)
+	public void _ZHfjECn2B9JJHnVF67eBaO57JUp(InvSwapPacket invSwap)
 	{
-		if (invSwap._ecyyaYf6RV1NPdHtzXFXLG5mpFA.objectId == this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._7w6u8taiwfZruB2OdFEa2AmzJaA)
+		if (invSwap.SlotObject1.objectId == this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._7w6u8taiwfZruB2OdFEa2AmzJaA)
 		{
-			if (invSwap._ecyyaYf6RV1NPdHtzXFXLG5mpFA._uKGrcCaKPH5uzoPQhtn5OnB2jAL == 1)
+			if (invSwap.SlotObject1.SlotId == 1)
 			{
-				this._T1pUOttbRRz7ku5YCPysaK7ODuE(invSwap._R1rVnNom2O6z6ToODjdI248Gp3O.ObjectType);
+				this._T1pUOttbRRz7ku5YCPysaK7ODuE(invSwap.SlotObject2.ObjectType);
 			}
 		}
-		if (invSwap._R1rVnNom2O6z6ToODjdI248Gp3O.objectId == this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._7w6u8taiwfZruB2OdFEa2AmzJaA)
+		if (invSwap.SlotObject2.objectId == this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._7w6u8taiwfZruB2OdFEa2AmzJaA)
 		{
-			if (invSwap._R1rVnNom2O6z6ToODjdI248Gp3O._uKGrcCaKPH5uzoPQhtn5OnB2jAL == 1)
+			if (invSwap.SlotObject2.SlotId == 1)
 			{
-				this._T1pUOttbRRz7ku5YCPysaK7ODuE(invSwap._ecyyaYf6RV1NPdHtzXFXLG5mpFA.ObjectType);
+				this._T1pUOttbRRz7ku5YCPysaK7ODuE(invSwap.SlotObject1.ObjectType);
 			}
 		}
 	}
@@ -280,7 +280,7 @@ Parameter name: length
 	}
 
 	// Token: 0x060004B9 RID: 1209 RVA: 0x0001AFD0 File Offset: 0x000191D0
-	public void _M1PxW31jx87SGG4gvOYAwe86vjg(_PQHQze9k9pObME2LmlIcbfEeSYS aoe)
+	public void _M1PxW31jx87SGG4gvOYAwe86vjg(AoEPacket aoe)
 	{
 		this._AMQrd56F3iBO7prif4hznTC4y5A.Add(new _7kZ0X7cJVyJ4MZi00zDEPWadmiH(aoe));
 	}
@@ -310,19 +310,19 @@ Parameter name: length
 	}
 
 	// Token: 0x060004BB RID: 1211 RVA: 0x0001B0EC File Offset: 0x000192EC
-	public void _524YRDmz9HCOj575eu5oeD5ruJb(_HLlcDvAIxPBOvJZP4BFTFQUoryN groundDamage)
+	public void _524YRDmz9HCOj575eu5oeD5ruJb(GroundDamagePacket groundDamage)
 	{
 		if (this._Hw75pbsTTalpiL9BLfm1eA0YOFK)
 		{
 			groundDamage.Send = false;
 		}
-		Square q3lhvRoGxDHbe4DHt5QEvG37i6dA = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._fuF7NYMFFzBrq5FBvTs4MvKbrW(groundDamage._MkT06oCYgDubgW2NbEOzvLh8RLe);
+		Square q3lhvRoGxDHbe4DHt5QEvG37i6dA = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._fuF7NYMFFzBrq5FBvTs4MvKbrW(groundDamage.Position);
 		if (q3lhvRoGxDHbe4DHt5QEvG37i6dA != null)
 		{
-			this._Qkocwb8McbBzbTY7woKcuOjrC0((int)q3lhvRoGxDHbe4DHt5QEvG37i6dA._BcbT5d0qQueJ6Bgm9dZYuz6EnZg.MaxDamage, "Ground damage (" + q3lhvRoGxDHbe4DHt5QEvG37i6dA._BcbT5d0qQueJ6Bgm9dZYuz6EnZg._ikFKebqGeYDppnRN94BtlHzztCC<System.UInt16>._Jp3DtIV4aAYZY26sVsXpPQjBRGO + ")");
+			this._Qkocwb8McbBzbTY7woKcuOjrC0((int)q3lhvRoGxDHbe4DHt5QEvG37i6dA.Tile.MaxDamage, "Ground damage (" + q3lhvRoGxDHbe4DHt5QEvG37i6dA.Tile._ikFKebqGeYDppnRN94BtlHzztCC<System.UInt16>._Jp3DtIV4aAYZY26sVsXpPQjBRGO + ")");
 			return;
 		}
-		Console.WriteLine(string.Format("Null tile at {0} when taking GroundDamage", groundDamage._MkT06oCYgDubgW2NbEOzvLh8RLe));
+		Console.WriteLine(string.Format("Null tile at {0} when taking GroundDamage", groundDamage.Position));
 		this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._mwjcQHLef7XHbndcINL6ltoY3vmb("AutoNexus", "Took ground damage from an unknown source, autonexus may not be fully functional!");
 	}
 
@@ -333,21 +333,21 @@ Parameter name: length
 		{
 			playerHit.Send = false;
 		}
-		string str = playerHit._605Ligxeaj9k9kBV8zQhhFhgTGl.ToString();
-		if (this._6HhWgr0VLGFSNUy8ZkAyxO8zznB.ContainsKey(playerHit._605Ligxeaj9k9kBV8zQhhFhgTGl))
+		string str = playerHit.ObjectId.ToString();
+		if (this._6HhWgr0VLGFSNUy8ZkAyxO8zznB.ContainsKey(playerHit.ObjectId))
 		{
-			str = _JzyrOApzC09RC3fmb10FDURmyCl.Objects._VoD2o9blcwqcx7hMw7WQQNbE28(this._6HhWgr0VLGFSNUy8ZkAyxO8zznB[playerHit._605Ligxeaj9k9kBV8zQhhFhgTGl])._ikFKebqGeYDppnRN94BtlHzztCC<System.UInt16>._Jp3DtIV4aAYZY26sVsXpPQjBRGO;
+			str = _JzyrOApzC09RC3fmb10FDURmyCl.Objects._VoD2o9blcwqcx7hMw7WQQNbE28(this._6HhWgr0VLGFSNUy8ZkAyxO8zznB[playerHit.ObjectId])._ikFKebqGeYDppnRN94BtlHzztCC<System.UInt16>._Jp3DtIV4aAYZY26sVsXpPQjBRGO;
 		}
-		if (!this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._Ani0JV9AEtv593Gb1nTnVgkYqML.ContainsKey(playerHit._605Ligxeaj9k9kBV8zQhhFhgTGl))
+		if (!this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._Ani0JV9AEtv593Gb1nTnVgkYqML.ContainsKey(playerHit.ObjectId))
 		{
-			Console.WriteLine("We got hit by a shot that is not logged, owner: " + str + ", bid: " + playerHit._0v4mmgyFOmt9eSc23UclkqyBncC.ToString());
+			Console.WriteLine("We got hit by a shot that is not logged, owner: " + str + ", bid: " + playerHit.BulletId.ToString());
 			this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._mwjcQHLef7XHbndcINL6ltoY3vmb("AutoNexus", "Took projectile damage from an unknown source, autonexus may not be fully functional!");
 			return;
 		}
-		Dictionary<int, Projectile> dictionary = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._Ani0JV9AEtv593Gb1nTnVgkYqML[playerHit._605Ligxeaj9k9kBV8zQhhFhgTGl];
-		if (dictionary.ContainsKey((int)playerHit._0v4mmgyFOmt9eSc23UclkqyBncC))
+		Dictionary<int, Projectile> dictionary = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._Ani0JV9AEtv593Gb1nTnVgkYqML[playerHit.ObjectId];
+		if (dictionary.ContainsKey((int)playerHit.BulletId))
 		{
-			Projectile projectile = dictionary[(int)playerHit._0v4mmgyFOmt9eSc23UclkqyBncC];
+			Projectile projectile = dictionary[(int)playerHit.BulletId];
 			bool armorPierce = Projectile.IsPiercing((int)this._6HhWgr0VLGFSNUy8ZkAyxO8zznB[projectile.OwnerId], projectile.ProjectileType);
 			int amount = this._J8MwnexgOmgIB8O2UFl3jAf56PH((ushort)projectile.Damage, this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._50Ms1zsqax9Ua48PaWMPQfIENYb._I8uQpaQw1Wx940p3k48AjKZWpuM, armorPierce);
 			if (Projectile.IsArmorBreaking((int)this._6HhWgr0VLGFSNUy8ZkAyxO8zznB[projectile.OwnerId], projectile.ProjectileType))
@@ -499,7 +499,7 @@ Parameter name: length
 					_66CXgP76qcRM5NMLzlNSbhfhXbG 66CXgP76qcRM5NMLzlNSbhfhXbG = _JzyrOApzC09RC3fmb10FDURmyCl.Items.ByID((ushort)num2);
 					if (66CXgP76qcRM5NMLzlNSbhfhXbG != null && 66CXgP76qcRM5NMLzlNSbhfhXbG._OXia9YzoHauuO4pwLRh46SjGQeh && 66CXgP76qcRM5NMLzlNSbhfhXbG._dHPNoGlmrfb0cl4aaEGpRxXcgRw.Count != 0)
 					{
-						if (66CXgP76qcRM5NMLzlNSbhfhXbG._dHPNoGlmrfb0cl4aaEGpRxXcgRw.Where(new Func<_kEekgEziy3MAWF43C6Y4bLsMB7E, bool>(AutoNexus._COGac3v2Ltj2Rm61nUs1anvxYmd.<>9._BtCpICxZUD14Y9ob2aTTpGXgwGM)).Where(new Func<_kEekgEziy3MAWF43C6Y4bLsMB7E, bool>(AutoNexus._COGac3v2Ltj2Rm61nUs1anvxYmd.<>9._PoMZS1TIek23FTr8kGDUp3DmApF)).Any<_kEekgEziy3MAWF43C6Y4bLsMB7E>())
+						if (66CXgP76qcRM5NMLzlNSbhfhXbG._dHPNoGlmrfb0cl4aaEGpRxXcgRw.Where(new Func<Activate, bool>(AutoNexus._COGac3v2Ltj2Rm61nUs1anvxYmd.<>9._BtCpICxZUD14Y9ob2aTTpGXgwGM)).Where(new Func<Activate, bool>(AutoNexus._COGac3v2Ltj2Rm61nUs1anvxYmd.<>9._PoMZS1TIek23FTr8kGDUp3DmApF)).Any<Activate>())
 						{
 							return new int[]
 							{
@@ -518,15 +518,15 @@ Parameter name: length
 	private void _sOwc8Hz5GYPFJ7BLvgRX72MvmaK(int time, int itemType, byte slotId, Location location)
 	{
 		UseItemPacket lylWoxWrca2h31SiYiDb8gyQP0o = (UseItemPacket)Packet.Create(PacketType.USEITEM);
-		lylWoxWrca2h31SiYiDb8gyQP0o.SlotObject = new _A3HGGdSvVENqKj3O1HGYDO3Qh8C
+		lylWoxWrca2h31SiYiDb8gyQP0o.SlotObject = new SlotObject
 		{
 			objectId = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._7w6u8taiwfZruB2OdFEa2AmzJaA,
 			ObjectType = itemType,
-			_uKGrcCaKPH5uzoPQhtn5OnB2jAL = (int)slotId
+			SlotId = (int)slotId
 		};
-		lylWoxWrca2h31SiYiDb8gyQP0o._Nx46RcGIU0H1BCGWaJXjN1ieopt = time;
-		lylWoxWrca2h31SiYiDb8gyQP0o._fbMEQqPOnQITCQFqK3LVLkEtWye = location;
-		lylWoxWrca2h31SiYiDb8gyQP0o._zDKahCudqipTR5FObLj9ijwgWo8 = ((slotId >= 254) ? 0 : 1);
+		lylWoxWrca2h31SiYiDb8gyQP0o.Time = time;
+		lylWoxWrca2h31SiYiDb8gyQP0o.ItemUsePos = location;
+		lylWoxWrca2h31SiYiDb8gyQP0o.UseType = ((slotId >= 254) ? 0 : 1);
 		this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._7uxLEqPg6T4dttVtkm2zilX7Qji(lylWoxWrca2h31SiYiDb8gyQP0o);
 	}
 
@@ -671,7 +671,7 @@ Parameter name: length
 		{
 			string format = "Warning, player {0}'s seal is null! itemType is {1}";
 			GameObject owpal6UeunpGQX6SceuuADJxQ4k = ngEaTpjfBI3veqdBfggv7SjSaRU._OWPal6UeunpGQX6SceuuADJxQ4k;
-			Console.WriteLine(string.Format(format, (owpal6UeunpGQX6SceuuADJxQ4k != null) ? owpal6UeunpGQX6SceuuADJxQ4k._Jp3DtIV4aAYZY26sVsXpPQjBRGO : null, num));
+			Console.WriteLine(string.Format(format, (owpal6UeunpGQX6SceuuADJxQ4k != null) ? owpal6UeunpGQX6SceuuADJxQ4k.Name : null, num));
 			return 0;
 		}
 		ngEaTpjfBI3veqdBfggv7SjSaRU._a8AkCF855MfIlZCpL3R4tVhzRug = ((ngEaTpjfBI3veqdBfggv7SjSaRU._OWPal6UeunpGQX6SceuuADJxQ4k._WHCAkdeYqXMbNsGZ6LrBhVGy9y4 < 30) ? 4.5 : (0.135 * (double)ngEaTpjfBI3veqdBfggv7SjSaRU._OWPal6UeunpGQX6SceuuADJxQ4k._WHCAkdeYqXMbNsGZ6LrBhVGy9y4));
@@ -679,9 +679,9 @@ Parameter name: length
 		{
 			return 0;
 		}
-		foreach (_kEekgEziy3MAWF43C6Y4bLsMB7E kEekgEziy3MAWF43C6Y4bLsMB7E in 66CXgP76qcRM5NMLzlNSbhfhXbG._dHPNoGlmrfb0cl4aaEGpRxXcgRw)
+		foreach (Activate kEekgEziy3MAWF43C6Y4bLsMB7E in 66CXgP76qcRM5NMLzlNSbhfhXbG._dHPNoGlmrfb0cl4aaEGpRxXcgRw)
 		{
-			if (kEekgEziy3MAWF43C6Y4bLsMB7E._tgk0PcUCADsdky6nxKvRJqbCugJA == _JZtb0fIAYUtmQ0Q0NW17n13rFHC.MaximumHP)
+			if (kEekgEziy3MAWF43C6Y4bLsMB7E._tgk0PcUCADsdky6nxKvRJqbCugJA == StatsTypeEnum.MaximumHP)
 			{
 				ActivateType jp3DtIV4aAYZY26sVsXpPQjBRGO = kEekgEziy3MAWF43C6Y4bLsMB7E._Jp3DtIV4aAYZY26sVsXpPQjBRGO;
 				if (jp3DtIV4aAYZY26sVsXpPQjBRGO == ActivateType.StatBoostAura)
@@ -765,11 +765,11 @@ Parameter name: length
 
 	// Token: 0x060004D0 RID: 1232 RVA: 0x0001BD9C File Offset: 0x00019F9C
 	[CompilerGenerated]
-	private int _Uds8LACABRKlO8SErTdqBEBcjyA(_kEekgEziy3MAWF43C6Y4bLsMB7E activate, ref AutoNexus._NgEaTpjfBI3veqdBfggv7SjSaRU _NgEaTpjfBI3veqdBfggv7SjSaRU_0)
+	private int _Uds8LACABRKlO8SErTdqBEBcjyA(Activate activate, ref AutoNexus._NgEaTpjfBI3veqdBfggv7SjSaRU _NgEaTpjfBI3veqdBfggv7SjSaRU_0)
 	{
 		double num = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._50Ms1zsqax9Ua48PaWMPQfIENYb._Z5Ka0qxWyONdxRmDe3dCDBoiFMw._lEH5A8k6GZhNzOJciwld9Bb4RqP(_NgEaTpjfBI3veqdBfggv7SjSaRU_0._OWPal6UeunpGQX6SceuuADJxQ4k._Z5Ka0qxWyONdxRmDe3dCDBoiFMw);
-		this._oyoi7MZ00uEXn3wJhjCw1K4UBTJ((double)activate._QlEG5HgPoEVIqet6s0wjtJin6og, _NgEaTpjfBI3veqdBfggv7SjSaRU_0._OWPal6UeunpGQX6SceuuADJxQ4k._WHCAkdeYqXMbNsGZ6LrBhVGy9y4, 1.0);
-		int result = (int)this._oyoi7MZ00uEXn3wJhjCw1K4UBTJ((double)activate._LSYUIOfmY90J6IoaCl7L9eIagWcA, _NgEaTpjfBI3veqdBfggv7SjSaRU_0._OWPal6UeunpGQX6SceuuADJxQ4k._WHCAkdeYqXMbNsGZ6LrBhVGy9y4, 0.0);
+		this._oyoi7MZ00uEXn3wJhjCw1K4UBTJ((double)activate.Range, _NgEaTpjfBI3veqdBfggv7SjSaRU_0._OWPal6UeunpGQX6SceuuADJxQ4k._WHCAkdeYqXMbNsGZ6LrBhVGy9y4, 1.0);
+		int result = (int)this._oyoi7MZ00uEXn3wJhjCw1K4UBTJ((double)activate.Amount, _NgEaTpjfBI3veqdBfggv7SjSaRU_0._OWPal6UeunpGQX6SceuuADJxQ4k._WHCAkdeYqXMbNsGZ6LrBhVGy9y4, 0.0);
 		if (num >= _NgEaTpjfBI3veqdBfggv7SjSaRU_0._a8AkCF855MfIlZCpL3R4tVhzRug)
 		{
 			return 0;
@@ -799,7 +799,7 @@ Parameter name: length
 	private int _nIuIwM7BarTHQX1xmpazfcFvdit;
 
 	// Token: 0x040005C6 RID: 1478
-	private _66CXgP76qcRM5NMLzlNSbhfhXbG _KgvAv7C8BPHRhNGaBUY9WAoRFFU;
+	private ItemStructure _KgvAv7C8BPHRhNGaBUY9WAoRFFU;
 
 	// Token: 0x040005C7 RID: 1479
 	private int _wIV6RuTHp6K14hjsabfqulJm6RB;
@@ -855,25 +855,25 @@ Parameter name: length
 	private sealed class _COGac3v2Ltj2Rm61nUs1anvxYmd
 	{
 		// Token: 0x060004D3 RID: 1235 RVA: 0x0001BE48 File Offset: 0x0001A048
-		internal bool _BtCpICxZUD14Y9ob2aTTpGXgwGM(_kEekgEziy3MAWF43C6Y4bLsMB7E activate)
+		internal bool _BtCpICxZUD14Y9ob2aTTpGXgwGM(Activate activate)
 		{
-			return activate._Jp3DtIV4aAYZY26sVsXpPQjBRGO == ActivateType.Heal || activate._Jp3DtIV4aAYZY26sVsXpPQjBRGO == ActivateType.HealNova;
+			return activate.Name == ActivateType.Heal || activate.Name == ActivateType.HealNova;
 		}
 
 		// Token: 0x060004D4 RID: 1236 RVA: 0x0001BE6C File Offset: 0x0001A06C
-		internal bool _PoMZS1TIek23FTr8kGDUp3DmApF(_kEekgEziy3MAWF43C6Y4bLsMB7E activate)
+		internal bool _PoMZS1TIek23FTr8kGDUp3DmApF(Activate activate)
 		{
-			return activate._LSYUIOfmY90J6IoaCl7L9eIagWcA > 0;
+			return activate.Amount > 0;
 		}
 
 		// Token: 0x040005D7 RID: 1495
 		public static readonly AutoNexus._COGac3v2Ltj2Rm61nUs1anvxYmd <>9 = new AutoNexus._COGac3v2Ltj2Rm61nUs1anvxYmd();
 
 		// Token: 0x040005D8 RID: 1496
-		public static Func<_kEekgEziy3MAWF43C6Y4bLsMB7E, bool> <>9__44_0;
+		public static Func<Activate, bool> <>9__44_0;
 
 		// Token: 0x040005D9 RID: 1497
-		public static Func<_kEekgEziy3MAWF43C6Y4bLsMB7E, bool> <>9__44_1;
+		public static Func<Activate, bool> <>9__44_1;
 	}
 
 	// Token: 0x020000B0 RID: 176

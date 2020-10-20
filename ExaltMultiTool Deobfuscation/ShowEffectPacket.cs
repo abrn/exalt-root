@@ -20,7 +20,7 @@ internal class ShowEffectPacket : Packet
 	{
 		this.EffectType = (EffectType)r.ReadByte();
 		byte b = r.ReadByte();
-		this.TargetId = (((b & 64) != 0) ? _di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r) : 0);
+		this.TargetId = (((b & 64) != 0) ? CompressedInt.Read(r) : 0);
 		this.PosA.X = (double)(((b & 2) != 0) ? r.ReadSingle() : 0f);
 		this.PosA.Y = (double)(((b & 4) != 0) ? r.ReadSingle() : 0f);
 		this.PostB.X = (double)(((b & 8) != 0) ? r.ReadSingle() : 0f);

@@ -10,10 +10,10 @@ using System.Runtime.CompilerServices;
 [CompilerGenerated]
 [GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
 [DebuggerNonUserCode]
-internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
+internal class Resources
 {
 	// Token: 0x0600004A RID: 74 RVA: 0x0000AB90 File Offset: 0x00008D90
-	internal _VIgCTVMa1A4g21SK8I7wH9AJhr8A()
+	internal Resources()
 	{
 	}
 
@@ -24,11 +24,11 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			if (_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BJyKjagWncUuiLE5ddwgHgjCXzf == null)
+			if (Resources._BJyKjagWncUuiLE5ddwgHgjCXzf == null)
 			{
-				_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BJyKjagWncUuiLE5ddwgHgjCXzf = new ResourceManager("_VIgCTVMa1A4g21SK8I7wH9AJhr8A", typeof(_VIgCTVMa1A4g21SK8I7wH9AJhr8A).Assembly);
+				Resources._BJyKjagWncUuiLE5ddwgHgjCXzf = new ResourceManager("_VIgCTVMa1A4g21SK8I7wH9AJhr8A", typeof(Resources).Assembly);
 			}
-			return _VIgCTVMa1A4g21SK8I7wH9AJhr8A._BJyKjagWncUuiLE5ddwgHgjCXzf;
+			return Resources._BJyKjagWncUuiLE5ddwgHgjCXzf;
 		}
 	}
 
@@ -40,11 +40,11 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8;
+			return Resources._oknDzAPZeKAKef87BVucZeKwHE8;
 		}
 		set
 		{
-			_VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8 = value;
+			Resources._oknDzAPZeKAKef87BVucZeKwHE8 = value;
 		}
 	}
 
@@ -54,7 +54,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("ExaltKit", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("ExaltKit", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -64,7 +64,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("ExaltKitLauncher", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("ExaltKitLauncher", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -74,7 +74,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return _VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetString("GroundTypes", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetString("GroundTypes", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -84,7 +84,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Cloth_Bazaar", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Cloth_Bazaar", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -94,7 +94,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Daily_Quest_Room", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Daily_Quest_Room", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -104,7 +104,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Guild_Hall_1", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Guild_Hall_1", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -114,7 +114,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Lair_of_Shaitan", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Lair_of_Shaitan", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -124,7 +124,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Nexus", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Nexus", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -134,7 +134,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Nexus_Summer_Night", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Nexus_Summer_Night", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -144,7 +144,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Nexus_Summer_Noon", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Nexus_Summer_Noon", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -154,7 +154,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Nexus_Summer_Sunrise", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Nexus_Summer_Sunrise", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -164,7 +164,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Nexus_Summer_Sunset", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Nexus_Summer_Sunset", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -174,7 +174,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Oryx_s_Castle", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Oryx_s_Castle", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -184,7 +184,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_PetYard_Divine", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_PetYard_Divine", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -194,7 +194,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_1", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_1", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -204,7 +204,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_1_sand", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_1_sand", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -214,7 +214,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_10", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_10", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -224,7 +224,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_10_sand", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_10_sand", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -234,7 +234,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_11", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_11", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -244,7 +244,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_11_sand", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_11_sand", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -254,7 +254,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_12", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_12", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -264,7 +264,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_12_sand", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_12_sand", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -274,7 +274,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_13", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_13", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -284,7 +284,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_13_sand", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_13_sand", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -294,7 +294,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_2", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_2", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -304,7 +304,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_2_sand", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_2_sand", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -314,7 +314,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_3", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_3", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -324,7 +324,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_3_sand", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_3_sand", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -334,7 +334,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_4", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_4", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -344,7 +344,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_4_sand", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_4_sand", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -354,7 +354,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_5", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_5", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -364,7 +364,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_5_sand", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_5_sand", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -374,7 +374,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_6", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_6", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -384,7 +384,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_6_sand", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_6_sand", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -394,7 +394,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_7", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_7", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -404,7 +404,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_7_sand", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_7_sand", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -414,7 +414,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_8", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_8", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -424,7 +424,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_8_sand", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_8_sand", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -434,7 +434,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_9", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_9", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -444,7 +444,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_9_sand", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Realm_of_the_Mad_God_World_9_sand", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -454,7 +454,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return (byte[])_VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Vault", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return (byte[])Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetObject("map_Vault", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 
@@ -464,7 +464,7 @@ internal class _VIgCTVMa1A4g21SK8I7wH9AJhr8A
 	{
 		get
 		{
-			return _VIgCTVMa1A4g21SK8I7wH9AJhr8A._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetString("Objects", _VIgCTVMa1A4g21SK8I7wH9AJhr8A._oknDzAPZeKAKef87BVucZeKwHE8);
+			return Resources._BfKJbNYd5Q9sdcGZiPVNDXj1Txi.GetString("Objects", Resources._oknDzAPZeKAKef87BVucZeKwHE8);
 		}
 	}
 

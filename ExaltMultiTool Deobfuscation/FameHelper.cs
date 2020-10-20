@@ -268,7 +268,7 @@ Parameter name: length
 		}
 		if (Settings.Default.FameBlockDrinking)
 		{
-			/*ItemStructure*/_66CXgP76qcRM5NMLzlNSbhfhXbG itemStructure = GameData.Items.ByID((ushort)useItem.SlotObject.ObjectType);
+			/*ItemStructure*/ItemStructure itemStructure = GameData.Items.ByID((ushort)useItem.SlotObject.ObjectType);
 			if (itemStructure != null)
 			{
 				if (itemStructure.Potion)

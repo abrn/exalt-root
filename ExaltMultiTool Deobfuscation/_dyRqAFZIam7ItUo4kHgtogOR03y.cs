@@ -7,26 +7,26 @@ internal class _dyRqAFZIam7ItUo4kHgtogOR03y : Packet
 	public override void Read(PacketReader r)
 	{
 		this._aEt2m1KmAUMmB6GB1VH6xO7nfTo = r.ReadBoolean();
-		this._vHwvFTdtybw0wbMUYb9dAbmmlwo = _di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r);
-		this._dTandZssr5wqR01xSFUDFq5dcMG = _di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r);
-		this._ojemGvaGxKtDMP5HMiAE7112GWE = _di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r);
-		int num = _di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r);
+		this._vHwvFTdtybw0wbMUYb9dAbmmlwo = CompressedInt.Read(r);
+		this._dTandZssr5wqR01xSFUDFq5dcMG = CompressedInt.Read(r);
+		this._ojemGvaGxKtDMP5HMiAE7112GWE = CompressedInt.Read(r);
+		int num = CompressedInt.Read(r);
 		this._lDZ2Fa0xsQLf7DftRC2peVut2Wh = new int[num];
 		for (int i = 0; i < num; i++)
 		{
-			this._lDZ2Fa0xsQLf7DftRC2peVut2Wh[i] = _di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r);
+			this._lDZ2Fa0xsQLf7DftRC2peVut2Wh[i] = CompressedInt.Read(r);
 		}
-		num = _di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r);
+		num = CompressedInt.Read(r);
 		this._5C5D2XeNHhtkTpVa000vhfE0GpcA = new int[num];
 		for (int i = 0; i < num; i++)
 		{
-			this._5C5D2XeNHhtkTpVa000vhfE0GpcA[i] = _di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r);
+			this._5C5D2XeNHhtkTpVa000vhfE0GpcA[i] = CompressedInt.Read(r);
 		}
-		num = _di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r);
+		num = CompressedInt.Read(r);
 		this._tTjbnC1WCSEVy0Xbj9YV3MXie4n = new int[num];
 		for (int i = 0; i < num; i++)
 		{
-			this._tTjbnC1WCSEVy0Xbj9YV3MXie4n[i] = _di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r);
+			this._tTjbnC1WCSEVy0Xbj9YV3MXie4n[i] = CompressedInt.Read(r);
 		}
 		this._z4gKavtyvb3dxFmEc8EzDvPwPDw = (int)r.ReadInt16();
 		this._VYjsOGPwGgg72VFk07reSzsChTf = (int)r.ReadInt16();

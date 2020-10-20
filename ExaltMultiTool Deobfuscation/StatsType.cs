@@ -48,8 +48,13 @@ internal class StatsType
 		return type.m_type != id;
 	}
 
-	// Token: 0x060002B2 RID: 690 RVA: 0x000129BC File Offset: 0x00010BBC
-	public static bool Id(StatsType type, StatsType id)
+    internal static UpdatePacket Id(StatsType id)
+    {
+        throw new NotImplementedException();
+    }
+
+    // Token: 0x060002B2 RID: 690 RVA: 0x000129BC File Offset: 0x00010BBC
+    public static bool Id(StatsType type, StatsType id)
 	{
 		return type.m_type == id.m_type;
 	}
@@ -97,7 +102,7 @@ internal class StatsType
 	public static readonly StatsType HP = new StatsType(1);
 
 	// Token: 0x040003E0 RID: 992
-	public static readonly StatsType _l5HAIp8OEZRguJkIVcZQDtTd8ME = new StatsType(2);
+	public static readonly StatsType Size = new StatsType(2);
 
 	// Token: 0x040003E1 RID: 993
 	public static readonly StatsType _QkkjT08Jq1EAHiSlsxNcrD5paX9 = new StatsType(3);
@@ -370,7 +375,7 @@ internal class StatsType
 	public static readonly StatsType _X8q6VXJQNDcYN8rbRgidYNYsq4b = new StatsType(95);
 
 	// Token: 0x0400043B RID: 1083
-	public static readonly StatsType _Vn1UXDYsa7sb8qGDESMjPifFRtx = new StatsType(96);
+	public static readonly StatsType Effects2 = new StatsType(96);
 
 	// Token: 0x0400043C RID: 1084
 	public static readonly StatsType _aG3ktVgN2Htvnpx3DoElnCGqDoJ = new StatsType(97);
@@ -431,4 +436,9 @@ internal class StatsType
 
 	// Token: 0x0400044F RID: 1103
 	private byte m_type;
+
+    internal static int statData(StatsType id)
+    {
+        throw new NotImplementedException();
+    }
 }

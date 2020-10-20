@@ -88,7 +88,7 @@
     <Compile Include="_5Qyhf9ImNgkDzh4BmaDRKP646iH.cs" />
     <Compile Include="_5REHLZQHHjlnOJeEg4aahwb3mAp.cs" />
     <Compile Include="_5V9yWe0NZ1FUZAVqEFttU08qdUi.cs" />
-    <Compile Include="_66CXgP76qcRM5NMLzlNSbhfhXbG.cs" />
+    <Compile Include="ItemStructure.cs" />
     <Compile Include="_6bFcDAcspnOQmt4APGeJjRcd3kA.cs" />
     <Compile Include="PacketReader.cs" />
     <Compile Include="_6lHFncsY9352Wg3pNnnFZ49g5xA.cs" />
@@ -117,89 +117,89 @@
     <Compile Include="_CuAD5qOVhedsxfPCkSon6261zEK.cs" />
     <Compile Include="_cw4BmSKJnnKhbzkGsIEJTEJcKKS.cs" />
     <Compile Include="StatsType.cs" />
-    <Compile Include="_DBVVB43n9c5uNQ7JklPD1fnCEnv.cs" />
-    <Compile Include="_di3Iyuw9XRVUyJrW7NCBFduCW4H.cs" />
-    <Compile Include="_DRnAVctaHy43lHFmLM8RiSA8VbP.cs" />
-    <Compile Include="_dTB7tEoatdtq5iT8bsKKFbL4EvR.cs" />
+    <Compile Include="GameObject.cs" />
+    <Compile Include="CompressedInt.cs" />
+    <Compile Include="KeyInfoRequestPacket.cs" />
+    <Compile Include="ReskinPetPacket.cs" />
     <Compile Include="_dyRqAFZIam7ItUo4kHgtogOR03y.cs" />
-    <Compile Include="_EawaZQvtvbptP3yFgHw8DNBicDZ.cs" />
-    <Compile Include="_ebE2NYQB7EKoUCgxRxlf6ZNHFvM.cs" />
-    <Compile Include="_EgQOaUO5676BG10AmyBJ8HYAf8u.cs" />
-    <Compile Include="_ehuh2DCa2tzgruNmEK1Ln9iWxRu.cs" />
+    <Compile Include="StatData.cs" />
+    <Compile Include="TradeStartPacket.cs" />
+    <Compile Include="ArenaDeathPacket.cs" />
+    <Compile Include="GotoAckPacket.cs" />
     <Compile Include="MovePacket.cs" />
-    <Compile Include="_EqQZEaZX9DWa2qWU9yl21hXa9eN.cs" />
-    <Compile Include="_eTOyUHUGABMgTlUf3FUyHRn1uVv.cs" />
-    <Compile Include="_EwBzQLuZPguBE7vtphoTr6H4ACg.cs" />
-    <Compile Include="_FbqBESNaaIBpK5dNK9X5lWOOll5.cs" />
-    <Compile Include="_FcecAoLgSn3EW3xLxrLFCvci1zaA.cs" />
-    <Compile Include="_fF056LUPJ2QRGuNEDdwfat8Nfg0.cs" />
-    <Compile Include="_FnRmALahJfDEzTebML54TY7cXcJA.cs" />
-    <Compile Include="_FPolKI5g9raqVz9ZsZ7mg3PNBKJ.cs" />
-    <Compile Include="_FvA2grK5CUVSLJHb7V5mXAgE1SA.cs" />
-    <Compile Include="_FxHTjhzASypEwujBvbdfkYAtD0hA.cs" />
-    <Compile Include="_FxW3cpBIUZT3nuKFOJfwHOThAq7.cs" />
-    <Compile Include="_GkX1Rrfs8ynIs9OHbmdoB1ZzpWf.cs" />
-    <Compile Include="_gLRtXViFwz3kMrybf5YR38CmseG.cs" />
-    <Compile Include="_GPSzBI8JwQY3Ng9uzVmGvhhOW2j.cs" />
-    <Compile Include="_HLlcDvAIxPBOvJZP4BFTFQUoryN.cs" />
-    <Compile Include="_hVYZnKlD1p4NKgHvEIulwTgi91f.cs" />
-    <Compile Include="_Ib42wtwN6sxV4rGF7mWwoGC6uzG.cs" />
-    <Compile Include="_ie7JTKAWyRmgDm1bLTkfqKGNcNO.cs" />
+    <Compile Include="PlayerData.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="PongPacket.cs" />
+    <Compile Include="PlayerShootPacket.cs" />
+    <Compile Include="JoinGuildPacket.cs" />
+    <Compile Include="InvDropPacket.cs" />
+    <Compile Include="AutoLoot.cs" />
+    <Compile Include="NameResultPacket.cs" />
+    <Compile Include="Tiers.cs" />
+    <Compile Include="QueueInformationPacket.cs" />
+    <Compile Include="ConditionEffects.cs" />
+    <Compile Include="TeleportTools.cs" />
+    <Compile Include="PicPacket.cs" />
+    <Compile Include="QuestData.cs" />
+    <Compile Include="GroundDamagePacket.cs" />
+    <Compile Include="Tile.cs" />
+    <Compile Include="FailurePacket.cs" />
+    <Compile Include="RemovePetFromListPacket.cs" />
     <Compile Include="AntiAFK.cs" />
     <Compile Include="_IHUllfO6Rr4ri1gTkx9LNb4zz7B.cs" />
-    <Compile Include="_IIZRzgbMibafawYU6cdrGlSGPV.cs" />
-    <Compile Include="_ikFKebqGeYDppnRN94BtlHzztCC.cs" />
-    <Compile Include="_ILfcijuHjcN8kneHQRoyTtZOOdK.cs" />
-    <Compile Include="_Iq6EzDJfMB4Iq5WP7HuL7ZnnHqE.cs" />
-    <Compile Include="_IwSrgqnT8TElTSYBCp1E6IjUZ6R.cs" />
-    <Compile Include="_iygLBTfWp8mFIjNdhg2h1kCo7YU.cs" />
-    <Compile Include="_JrdXxRFAhPHjNMwiVoCr24bVuORA.cs" />
-    <Compile Include="_jy35B46wABp35GSACnK9cRTDZkC.cs" />
-    <Compile Include="_jZCfRFFiBhqLvHFuILqdWaecTh6.cs" />
-    <Compile Include="_JZtb0fIAYUtmQ0Q0NW17n13rFHC.cs" />
+    <Compile Include="QuestRedeemResponsePacket.cs" />
+    <Compile Include="IDataStructure.cs" />
+    <Compile Include="BazaarTimer.cs" />
+    <Compile Include="PlaySoundPacket.cs" />
+    <Compile Include="AntiDebuffs.cs" />
+    <Compile Include="ArenaNextWavePacket.cs" />
+    <Compile Include="UsePortalPacket.cs" />
+    <Compile Include="NewAbilityPacket.cs" />
+    <Compile Include="CreateGuildPacket.cs" />
+    <Compile Include="StatsTypeEnum.cs" />
     <Compile Include="GameData.cs" />
-    <Compile Include="_K4pBHmoGRyaE6dWf1FIvL0dcuzKA.cs" />
-    <Compile Include="_k5gwmA7djmVvllYiZzL2keJPmKd.cs" />
-    <Compile Include="_kC3C6g1KdkZuzDfJgY7GL6Da2lU.cs" />
-    <Compile Include="_kEekgEziy3MAWF43C6Y4bLsMB7E.cs" />
-    <Compile Include="_kQNDzEPt874qKhHipauXeTCwdHG.cs" />
-    <Compile Include="_kW5yY39OOi1IEwT5kaiIp43tbmd.cs" />
+    <Compile Include="AccountListPacket.cs" />
+    <Compile Include="CreatePacket.cs" />
+    <Compile Include="CheckCreditsPacket.cs" />
+    <Compile Include="Activate.cs" />
+    <Compile Include="PlayerTextPacket.cs" />
+    <Compile Include="UpgradePetYaresultPacket.cs" />
     <Compile Include="_kzbOEABEghRPGNYW29gk2hy2kpe.Designer.cs">
       <DependentUpon>_kzbOEABEghRPGNYW29gk2hy2kpe.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="_LKXCtqN8hIH8qOlVlbcgUvWwe6w.cs" />
-    <Compile Include="_lylWoxWrca2h31SiYiDb8gyQP0o.cs" />
-    <Compile Include="_m0LaYtYXCYLft6qTol5zHQxjnf3.cs" />
-    <Compile Include="_m74ADSrj0VfuNwRBO916gAw0Nu0.cs" />
-    <Compile Include="_maJp2qic3r54gk5Eg1eeMowxvXh.cs" />
-    <Compile Include="_mdldjkCDbTUJSLT75iEBBUFp9cZ.cs" />
+    <Compile Include="NewCharacterInformationPacket.cs" />
+    <Compile Include="UseItemPacket.cs" />
+    <Compile Include="NewTickPacket.cs" />
+    <Compile Include="EscapePacket.cs" />
+    <Compile Include="InvSwapPacket.cs" />
+    <Compile Include="UpdateAckPacket.cs" />
     <Compile Include="_Mf7nnCoCiU2JtgFBsAknpCVgODr.Designer.cs">
       <DependentUpon>_Mf7nnCoCiU2JtgFBsAknpCVgODr.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="_MfAkBOGBLRiw9NYYbzHg9B0r0ip.cs" />
-    <Compile Include="_Mku1fJ4yaaUG0aszof0BAdTwult.cs" />
+    <Compile Include="ConditionEffectIndex.cs" />
+    <Compile Include="ClaimLoginRewardResponse.cs" />
     <Compile Include="_MRAqRiBsXVmIrTUhEyVasdjWGfe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="_MRAqRiBsXVmIrTUhEyVasdjWGfe.Designer.cs">
       <DependentUpon>_MRAqRiBsXVmIrTUhEyVasdjWGfe.cs</DependentUpon>
     </Compile>
-    <Compile Include="_mRGaC3xDrPwMlYAA6HwU5zbDMCAb.cs" />
-    <Compile Include="_mT6uAVMJuFA0gX5OXSX1QoU2eld.cs" />
-    <Compile Include="_N86mUxVjQQsFCS9cDy43ctfaHSj.cs" />
+    <Compile Include="QuestFetchResponsePacket.cs" />
+    <Compile Include="ActivePetUpdateRequestPacket.cs" />
+    <Compile Include="BuyPacket.cs" />
     <Compile Include="_nAPEEXr4yZDe8Jg1s5xBkYPOqyT.cs" />
-    <Compile Include="_ncsIJgBMf68I6U0Xa59TZvLSGmE.cs" />
-    <Compile Include="_nUDtUHP43JQCOe7LrxyYtPQXfmM.cs" />
+    <Compile Include="HatchEggPacket.cs" />
+    <Compile Include="PacketBuffer.cs" />
     <Compile Include="_nW2r0aRNoaN2otN0RLRiGoFBjOK.Designer.cs">
       <DependentUpon>_nW2r0aRNoaN2otN0RLRiGoFBjOK.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="_nZq2s5AwKBVNEI4GufXbP8ZQxIM.cs" />
+    <Compile Include="AntiLag.cs" />
     <Compile Include="_O8RCBX441Egsj4ff5BOJx95ggk8.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,43 +207,43 @@
       <DependentUpon>_O8RCBX441Egsj4ff5BOJx95ggk8.cs</DependentUpon>
     </Compile>
     <Compile Include="FameHelper.cs" />
-    <Compile Include="_Ody1BkyfRWNUf2Yig7bXVnOebw0.cs" />
-    <Compile Include="_oirHApJgzJXA6ZQb29bRR9s8CojA.cs" />
-    <Compile Include="_P09V081i9Lh8NQYZiduBTYKFmQf.cs" />
-    <Compile Include="_pm5Xab9a6fVVCtrQtgNhtlzDbYs.cs" />
-    <Compile Include="_PNaOsj6mX2vLtwZOV2i5MLHKqod.cs" />
-    <Compile Include="_pnuPjAfRN8T4Meiy1XTy8xajVuA.cs" />
-    <Compile Include="_PQHQze9k9pObME2LmlIcbfEeSYS.cs" />
-    <Compile Include="_PQQsCgwOKd00s2SrJuOirSOB2Gm.cs" />
-    <Compile Include="_Ps42O2MmsFVlJUilAWIvSAzROZ.cs" />
+    <Compile Include="AntiDdos.cs" />
+    <Compile Include="PetAbility.cs" />
+    <Compile Include="MapInfoPacket.cs" />
+    <Compile Include="MapHack.cs" />
+    <Compile Include="FilePacket.cs" />
+    <Compile Include="ChangeGuildRankPacket.cs" />
+    <Compile Include="AoEPacket.cs" />
+    <Compile Include="ConditionEffect.cs" />
+    <Compile Include="ConnectionHandler.cs" />
     <Compile Include="_Q1iu4PEWGR2odhAgRlKQSWbHhWM.Designer.cs">
       <DependentUpon>_Q1iu4PEWGR2odhAgRlKQSWbHhWM.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="_Q3lhvRoGxDHbe4DHt5QEvG37i6dA.cs" />
-    <Compile Include="_QG5jPojBKV5l4xNxF07i9fMynoR.cs" />
-    <Compile Include="_qO93IivIXTNK474aSp5Ihec6Lec.cs" />
-    <Compile Include="_rbCdtuLDwjMmAReiHW2SDTu8Fg6.cs" />
-    <Compile Include="_rdQNg2lTYamrZBEti2otTcDpfbg.cs" />
-    <Compile Include="_RIycmCn337rdwHKgAP2S8werk44.cs" />
-    <Compile Include="_Rm8xjUHTQir1DK1czffEi1GcCPN.cs" />
-    <Compile Include="_Rvckmor8bw91EVaRfdwc25aHYbc.cs" />
-    <Compile Include="_RwDBbQN3X6VbZ9dOERdFisexU7f.cs" />
-    <Compile Include="_SeOURj9wT08Ssc6bZOctUjk0KXi.cs" />
-    <Compile Include="_slFgc44ULMGrZ0xAA4ct2vIhlVh.cs" />
-    <Compile Include="_STe2bPkqPGrT82rYFTNvXVBAs1c.cs" />
-    <Compile Include="_SZwZnz5aofpMOg5TypLjaOdmoXU.cs" />
-    <Compile Include="_t6Dm14DLEBclRdQGAC3DJB6EfUT.cs" />
-    <Compile Include="_tgqdT3pJTudczfEYT1tBjGKzLQP.cs" />
-    <Compile Include="_TIEq0obCPUskA8pmJNl1kj5R8kR.cs" />
-    <Compile Include="_tJHGMoVf7DhHyQm8a6SCuL1cSWl.cs" />
-    <Compile Include="_tKKgiyKQiSAc2Hl06WbBNfo5lhT.cs" />
+    <Compile Include="Square.cs" />
+    <Compile Include="EnterArenaPacket.cs" />
+    <Compile Include="IpJoin.cs" />
+    <Compile Include="ClaimLoginRewardPacket.cs" />
+    <Compile Include="GuildInvitePacket.cs" />
+    <Compile Include="LoadPacket.cs" />
+    <Compile Include="KeyInfoResponsePacket.cs" />
+    <Compile Include="TeleportPacket.cs" />
+    <Compile Include="QuestRedeemPacket.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="o3Helper.cs" />
+    <Compile Include="AutoAbility.cs" />
+    <Compile Include="Proxy.cs" />
+    <Compile Include="ShootAckPacket.cs" />
+    <Compile Include="ParsingHelpers.cs" />
+    <Compile Include="GlobalNotificationPacket.cs" />
+    <Compile Include="InvitedToGuildPacket.cs" />
+    <Compile Include="HelloPacket.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="ReconnectPacket.cs" />
     <Compile Include="ActivateType.cs" />
     <Compile Include="ChooseNamePacket.cs" />
-    <Compile Include="ArenaDeathPacket.cs" />
+    <Compile Include="LeaveArenaPacket.cs" />
     <Compile Include="ServerParser.cs" />
     <Compile Include="ARGB.cs" />
     <Compile Include="RequestTradePacket.cs" />

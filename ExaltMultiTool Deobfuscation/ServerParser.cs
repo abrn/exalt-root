@@ -16,7 +16,7 @@ internal class ServerParser
 	// Token: 0x170000CD RID: 205
 	// (get) Token: 0x06000216 RID: 534 RVA: 0x0000F198 File Offset: 0x0000D398
 	// (set) Token: 0x06000217 RID: 535 RVA: 0x0000F1AC File Offset: 0x0000D3AC
-	public static Dictionary<string, string> _vw3jHhqvDKaEhpR5kZI8dnnJNXB { get; private set; } = new Dictionary<string, string>();
+	public static Dictionary<string, string> ServerAbbreviations { get; private set; } = new Dictionary<string, string>();
 
 	// Token: 0x06000218 RID: 536 RVA: 0x0000F1C0 File Offset: 0x0000D3C0
 	public static void Parse()
@@ -52,8 +52,8 @@ internal class ServerParser
 						stringBuilder.Append(c);
 					}
 				}
-				ServerParser._vw3jHhqvDKaEhpR5kZI8dnnJNXB.Add(stringBuilder.ToString().ToLower(), xmlNode2.InnerText);
-				ServerParser._vw3jHhqvDKaEhpR5kZI8dnnJNXB.Add(xmlNode2.InnerText.ToLower(), xmlNode2.InnerText);
+				ServerParser.ServerAbbreviations.Add(stringBuilder.ToString().ToLower(), xmlNode2.InnerText);
+				ServerParser.ServerAbbreviations.Add(xmlNode2.InnerText.ToLower(), xmlNode2.InnerText);
 			}
 			else
 			{

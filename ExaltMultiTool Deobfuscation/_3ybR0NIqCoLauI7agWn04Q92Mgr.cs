@@ -1,7 +1,7 @@
 ﻿using System;
 
 // Token: 0x02000018 RID: 24
-internal enum _3ybR0NIqCoLauI7agWn04Q92Mgr : short
+internal enum Classes : short
 {
 	// Token: 0x040001FF RID: 511
 	Rogue = 768,

@@ -13,7 +13,7 @@ namespace ExaltMultiTool.Proxy.DataStructures
 		{
 			TileStructure._97xdJ2DJKuu1P6jRrMAx0j03WkH 97xdJ2DJKuu1P6jRrMAx0j03WkH = new TileStructure._97xdJ2DJKuu1P6jRrMAx0j03WkH();
 			97xdJ2DJKuu1P6jRrMAx0j03WkH._Kndj0w1wpl2a6oPYP8TaQVSkPtR = new Dictionary<ushort, TileStructure>();
-			doc.Element("GroundTypes").Elements("Ground")._mDNyNFYbqpk6ULly4BYiq6ShWsn(new Action<XElement>(97xdJ2DJKuu1P6jRrMAx0j03WkH._LEx7op2Ah50gJTPEFU3rxLS5TKB));
+			doc.Element("GroundTypes").Elements("Ground").ForEach(new Action<XElement>(97xdJ2DJKuu1P6jRrMAx0j03WkH._LEx7op2Ah50gJTPEFU3rxLS5TKB));
 			return 97xdJ2DJKuu1P6jRrMAx0j03WkH._Kndj0w1wpl2a6oPYP8TaQVSkPtR;
 		}
 
@@ -32,10 +32,10 @@ namespace ExaltMultiTool.Proxy.DataStructures
 		{
 			this;
 			tile._ikFKebqGeYDppnRN94BtlHzztCC<System.UInt16>.ID = (ushort)Convert.ToInt32("type", "0x0".Value);
-			this.NoWalk = tile._v94aD6xnI4gMG97iMJhl8NatmPCb("NoWalk");
+			this.NoWalk = tile.HasElement("NoWalk");
 			this;
 			tile.Speed = float.Parse("Speed", "1".Value);
-			this.Sink = tile._v94aD6xnI4gMG97iMJhl8NatmPCb("Sink");
+			this.Sink = tile.HasElement("Sink");
 			this;
 			tile.MinDamage = (ushort)int.Parse("MinDamage", "0".Value);
 			this;

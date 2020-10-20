@@ -20,7 +20,7 @@ internal class MovePacket : Packet
 		this.TickId = r.ReadInt32();
 		this.Time = r.ReadInt32();
 		this._jibXvbYxtn4vGAp7d5JjGTJzRQB = r.ReadUInt32();
-		this._l6SobSknmpzcoMgQdVhaWNqcv8D = new Location(r);
+		this.NewPosition = new Location(r);
 		this._R1WaWBvLcECAzd7zfoHrisdxkyD = new LocationRecord[(int)r.ReadInt16()];
 		for (int i = 0; i < this._R1WaWBvLcECAzd7zfoHrisdxkyD.Length; i++)
 		{
@@ -34,7 +34,7 @@ internal class MovePacket : Packet
 		w.Write(this.TickId);
 		w.Write(this._Nx46RcGIU0H1BCGWaJXjN1ieopt);
 		w.Write(this._jibXvbYxtn4vGAp7d5JjGTJzRQB);
-		this._l6SobSknmpzcoMgQdVhaWNqcv8D.Write(w);
+		this.NewPosition.Write(w);
 		w.Write((short)this._R1WaWBvLcECAzd7zfoHrisdxkyD.Length);
 		LocationRecord[] r1WaWBvLcECAzd7zfoHrisdxkyD = this._R1WaWBvLcECAzd7zfoHrisdxkyD;
 		for (int i = 0; i < r1WaWBvLcECAzd7zfoHrisdxkyD.Length; i++)
@@ -53,7 +53,7 @@ internal class MovePacket : Packet
 	public uint _jibXvbYxtn4vGAp7d5JjGTJzRQB;
 
 	// Token: 0x0400045C RID: 1116
-	public Location _l6SobSknmpzcoMgQdVhaWNqcv8D;
+	public Location NewPosition;
 
 	// Token: 0x0400045D RID: 1117
 	public LocationRecord[] _R1WaWBvLcECAzd7zfoHrisdxkyD;

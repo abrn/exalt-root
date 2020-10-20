@@ -157,4 +157,5 @@ internal class Location : IDataObject /*idataobject*/, ICloneable
 
 	// Token: 0x04000324 RID: 804
 	public double y;
+    internal double _MFEyfKFQqtcdaBxZbAOPzXMB8iP;
 }

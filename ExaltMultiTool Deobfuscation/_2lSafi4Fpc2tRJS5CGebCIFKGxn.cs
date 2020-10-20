@@ -14,14 +14,14 @@ internal class AntiSpam
 	}
 
 	// Token: 0x0600048B RID: 1163 RVA: 0x000188F4 File Offset: 0x00016AF4
-	public void _IDtpCgDjmC1AQOcZCJSFNAYjlbH(_CBwOjnzusZzuPkHfx7wuwePHqrf text)
+	public void _IDtpCgDjmC1AQOcZCJSFNAYjlbH(TextPacket text)
 	{
 		AntiSpam._NALkTCRxB8Bckmseeqnv7i0kCyI nalkTCRxB8Bckmseeqnv7i0kCyI = new AntiSpam._NALkTCRxB8Bckmseeqnv7i0kCyI();
-		if (text._VOCc8CZlF3S0HMq8xxgy2zaOkBn < 0)
+		if (text.ObjectId < 0)
 		{
 			return;
 		}
-		string text2 = new string(text._IDtpCgDjmC1AQOcZCJSFNAYjlbH.Where(new Func<char, bool>(AntiSpam._vivpEx53PFCsVvObdFSPnLCt1jI.<>9._2dxsRhxa41ZKWVboSAEZpelfEdH)).ToArray<char>()).ToLower();
+		string text2 = new string(text.Text.Where(new Func<char, bool>(AntiSpam._vivpEx53PFCsVvObdFSPnLCt1jI.<>9._2dxsRhxa41ZKWVboSAEZpelfEdH)).ToArray<char>()).ToLower();
 		nalkTCRxB8Bckmseeqnv7i0kCyI._sZl5VVGwUNhpSevGpchDKxixKmq = string.Concat(new string[]
 		{
 			text2,

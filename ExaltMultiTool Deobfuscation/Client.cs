@@ -69,7 +69,7 @@ internal class Client
 		this._antiDebuffs = new AntiDebuffs(this);
 		this._antiLag = new AntiLag(this);
 		this._antiSpam = new AntiSpam(this);
-		this._autoNexus2 = new AutoNexus2(this);
+		this._autoNexus2 = new AutoAbility(this);
 		this._autoLoot = new AutoLoot(this);
 		this._autoNexus = new AutoNexus(this);
 		this._objectTracker = new ObjectTracker(this);
@@ -307,8 +307,8 @@ internal class Client
 		{
 			this.PreviousTime = movePacket._Nx46RcGIU0H1BCGWaJXjN1ieopt;
 			this._objectTracker.move(movePacket);
-			this._antiDebuffs.move(movePacket);
-			this._autoLoot.move(movePacket);
+			this._antiDebuffs.Move(movePacket);
+			this._autoLoot.Move(movePacket);
 			this.AntiAfk.move(movePacket);
 			this._autoNexus.move(movePacket);
 			this._autoNexus2.move(movePacket);
@@ -317,7 +317,7 @@ internal class Client
 		MapInfoPacket mapInfoPacket = packet as MapInfoPacket;
 		if (mapInfoPacket != null)
 		{
-			Console.WriteLine("Client: Map is " + mapInfoPacket._Jp3DtIV4aAYZY26sVsXpPQjBRGO);
+			Console.WriteLine("Client: Map is " + mapInfoPacket.Name);
 			this._objectTracker.MapInfo(mapInfoPacket);
 			this._autoNexus2.MapInfo(mapInfoPacket);
 			this.SafeWalk.MapInfo(mapInfoPacket);
@@ -337,7 +337,7 @@ internal class Client
 			this._teleportTools.text(playerTextPacket);
 			this._ipJoin.text(playerTextPacket);
 			this._fameHelper._QrK9KtR4xguWgEYrBE9xnEwwcqd(playerTextPacket);
-			this._antiLag.text(playerTextPacket);
+			this._antiLag.PlayerText(playerTextPacket);
 			this._mapHack.text(playerTextPacket);
 			this._autoNexus._QrK9KtR4xguWgEYrBE9xnEwwcqd(playerTextPacket);
 			return;
@@ -347,7 +347,7 @@ internal class Client
 		{
 			this.PlayerId = createSuccessPacket.ObjectId;
 			this._objectTracker._1lYB9SyYVs1zUAIHgLGbUs7pmeb();
-			this._bazaarTimer._1lYB9SyYVs1zUAIHgLGbUs7pmeb();
+			this._bazaarTimer.CreateSuccess();
 			this._autoNexus2._1lYB9SyYVs1zUAIHgLGbUs7pmeb();
 			return;
 		}
@@ -376,11 +376,11 @@ internal class Client
 			this._antiDebuffs.PlayerHit(playerHitPacket);
 			return;
 		}
-		_PQHQze9k9pObME2LmlIcbfEeSYS pqhqze9k9pObME2LmlIcbfEeSYS = packet as _PQHQze9k9pObME2LmlIcbfEeSYS;
+		AoEPacket pqhqze9k9pObME2LmlIcbfEeSYS = packet as AoEPacket;
 		if (pqhqze9k9pObME2LmlIcbfEeSYS != null)
 		{
 			this._autoNexus._M1PxW31jx87SGG4gvOYAwe86vjg(pqhqze9k9pObME2LmlIcbfEeSYS);
-			this._antiDebuffs._M1PxW31jx87SGG4gvOYAwe86vjg(pqhqze9k9pObME2LmlIcbfEeSYS);
+			this._antiDebuffs.AoE(pqhqze9k9pObME2LmlIcbfEeSYS);
 			return;
 		}
 		AoEAckPacket x7UwVkbcYG7VnZWu4HCA8hCeQtS = packet as AoEAckPacket;
@@ -389,13 +389,13 @@ internal class Client
 			this._autoNexus._iKqf12lpU2ifSlxUxUegqEC5CVe(x7UwVkbcYG7VnZWu4HCA8hCeQtS);
 			return;
 		}
-		_HLlcDvAIxPBOvJZP4BFTFQUoryN hllcDvAIxPBOvJZP4BFTFQUoryN = packet as _HLlcDvAIxPBOvJZP4BFTFQUoryN;
+		GroundDamagePacket hllcDvAIxPBOvJZP4BFTFQUoryN = packet as GroundDamagePacket;
 		if (hllcDvAIxPBOvJZP4BFTFQUoryN != null)
 		{
 			this._autoNexus._524YRDmz9HCOj575eu5oeD5ruJb(hllcDvAIxPBOvJZP4BFTFQUoryN);
 			return;
 		}
-		_6lHFncsY9352Wg3pNnnFZ49g5xA 6lHFncsY9352Wg3pNnnFZ49g5xA = packet as _6lHFncsY9352Wg3pNnnFZ49g5xA;
+		_6lHFncsY9352Wg3pNnnFZ49g5xA 6lHFncsY9352Wg3pNnnFZ49g5xA = packet as QuestObjIdPacket;
 		if (6lHFncsY9352Wg3pNnnFZ49g5xA != null)
 		{
 			this._teleportTools._FMTVFcTfzNRteqoB3XiUkaNps7l(6lHFncsY9352Wg3pNnnFZ49g5xA);
@@ -404,7 +404,7 @@ internal class Client
 		ShowEffectPacket showEffectPacket = packet as ShowEffectPacket;
 		if (showEffectPacket != null)
 		{
-			this._antiLag._1nwhQXngJ6rNjd7Ufx1bWeF0vhM(showEffectPacket);
+			this._antiLag.ShowEffect(showEffectPacket);
 			this._autoNexus._1nwhQXngJ6rNjd7Ufx1bWeF0vhM(showEffectPacket);
 			this._o3Helper._1nwhQXngJ6rNjd7Ufx1bWeF0vhM(showEffectPacket);
 			return;
@@ -415,24 +415,24 @@ internal class Client
 			this._antiLag._Q1PiJQ99KBCJeLcZ0HOk3AUAjIP(4wU9AwmH67XtmNygsXuDz9DUXYm);
 			return;
 		}
-		_FbqBESNaaIBpK5dNK9X5lWOOll5 fbqBESNaaIBpK5dNK9X5lWOOll = packet as _FbqBESNaaIBpK5dNK9X5lWOOll5;
+		PlayerShootPacket fbqBESNaaIBpK5dNK9X5lWOOll = packet as PlayerShootPacket;
 		if (fbqBESNaaIBpK5dNK9X5lWOOll != null)
 		{
-			this._autoNexus2._Khyl0TTBfDtVskFpnw4HUKIFLHj(fbqBESNaaIBpK5dNK9X5lWOOll);
+			this._autoNexus2.PlayerShoot(fbqBESNaaIBpK5dNK9X5lWOOll);
 			return;
 		}
-		_CBwOjnzusZzuPkHfx7wuwePHqrf cbwOjnzusZzuPkHfx7wuwePHqrf = packet as _CBwOjnzusZzuPkHfx7wuwePHqrf;
+		TextPacket cbwOjnzusZzuPkHfx7wuwePHqrf = packet as TextPacket;
 		if (cbwOjnzusZzuPkHfx7wuwePHqrf != null)
 		{
 			this._antiSpam._IDtpCgDjmC1AQOcZCJSFNAYjlbH(cbwOjnzusZzuPkHfx7wuwePHqrf);
-			this._antiLag._IDtpCgDjmC1AQOcZCJSFNAYjlbH(cbwOjnzusZzuPkHfx7wuwePHqrf);
+			this._antiLag.Text(cbwOjnzusZzuPkHfx7wuwePHqrf);
 			this._o3Helper._IDtpCgDjmC1AQOcZCJSFNAYjlbH(cbwOjnzusZzuPkHfx7wuwePHqrf);
 			return;
 		}
 		UseItemPacket lylWoxWrca2h31SiYiDb8gyQP0o = packet as UseItemPacket;
 		if (lylWoxWrca2h31SiYiDb8gyQP0o != null)
 		{
-			this._autoNexus2._byANTPGcPV95u6KbP2GDQqgUZ1f(lylWoxWrca2h31SiYiDb8gyQP0o);
+			this._autoNexus2.UseItem(lylWoxWrca2h31SiYiDb8gyQP0o);
 			this._fameHelper.UseItem(lylWoxWrca2h31SiYiDb8gyQP0o);
 			return;
 		}
@@ -442,10 +442,10 @@ internal class Client
 			this._objectTracker._Qz49aY7UXgmnBNNMA6Q6IEQtadk(cbwrHXLbrCktla3qkqXNmNymbvH);
 			return;
 		}
-		_maJp2qic3r54gk5Eg1eeMowxvXh maJp2qic3r54gk5Eg1eeMowxvXh = packet as _maJp2qic3r54gk5Eg1eeMowxvXh;
+		InvSwapPacket maJp2qic3r54gk5Eg1eeMowxvXh = packet as InvSwapPacket;
 		if (maJp2qic3r54gk5Eg1eeMowxvXh != null)
 		{
-			this._autoLoot._ZHfjECn2B9JJHnVF67eBaO57JUp(maJp2qic3r54gk5Eg1eeMowxvXh);
+			this._autoLoot.InvSwap(maJp2qic3r54gk5Eg1eeMowxvXh);
 			this._autoNexus._ZHfjECn2B9JJHnVF67eBaO57JUp(maJp2qic3r54gk5Eg1eeMowxvXh);
 			return;
 		}
@@ -455,10 +455,10 @@ internal class Client
 			this.Escape(m74ADSrj0VfuNwRBO916gAw0Nu);
 			return;
 		}
-		_tJHGMoVf7DhHyQm8a6SCuL1cSWl tJHGMoVf7DhHyQm8a6SCuL1cSWl = packet as _tJHGMoVf7DhHyQm8a6SCuL1cSWl;
+		InvitedToGuildPacket tJHGMoVf7DhHyQm8a6SCuL1cSWl = packet as InvitedToGuildPacket;
 		if (tJHGMoVf7DhHyQm8a6SCuL1cSWl != null)
 		{
-			this._antiDdos._UJngUa38CFZ8xbFYYDNCQi7pMAg(tJHGMoVf7DhHyQm8a6SCuL1cSWl);
+			this._antiDdos.Invite(tJHGMoVf7DhHyQm8a6SCuL1cSWl);
 			return;
 		}
 		TeleportPacket rvckmor8bw91EVaRfdwc25aHYbc = packet as TeleportPacket;
@@ -468,7 +468,7 @@ internal class Client
 			this._accuracyFarm.Teleport(rvckmor8bw91EVaRfdwc25aHYbc);
 			return;
 		}
-		_6UIiGxMChbVinHsvx5uqg8WrMRc 6UIiGxMChbVinHsvx5uqg8WrMRc = packet as _6UIiGxMChbVinHsvx5uqg8WrMRc;
+		_6UIiGxMChbVinHsvx5uqg8WrMRc 6UIiGxMChbVinHsvx5uqg8WrMRc = packet as InvResultPacket;
 		if (6UIiGxMChbVinHsvx5uqg8WrMRc != null)
 		{
 			this._autoLoot._yOjSn1WKSXsXVziJpL1eH5gSoWg(6UIiGxMChbVinHsvx5uqg8WrMRc);
@@ -480,19 +480,19 @@ internal class Client
 			this._autoNexus._4GSfC8bADOwIwOXLYze8EOUBQxJ(zIBPB6zZVww7yGWtjJqRMmACh1q);
 			return;
 		}
-		_K4pBHmoGRyaE6dWf1FIvL0dcuzKA k4pBHmoGRyaE6dWf1FIvL0dcuzKA = packet as _K4pBHmoGRyaE6dWf1FIvL0dcuzKA;
+		AccountListPacket k4pBHmoGRyaE6dWf1FIvL0dcuzKA = packet as AccountListPacket;
 		if (k4pBHmoGRyaE6dWf1FIvL0dcuzKA != null)
 		{
-			this._antiLag._3MuNCSmlbmV0iTAc8Xn9gqokJ3N(k4pBHmoGRyaE6dWf1FIvL0dcuzKA);
+			this._antiLag.AccountList(k4pBHmoGRyaE6dWf1FIvL0dcuzKA);
 			return;
 		}
-		_CO7ACSeK1WWaCGAPAqLaov37Wqdb co7ACSeK1WWaCGAPAqLaov37Wqdb = packet as _CO7ACSeK1WWaCGAPAqLaov37Wqdb;
+		EditAccountListPacket co7ACSeK1WWaCGAPAqLaov37Wqdb = packet as EditAccountListPacket;
 		if (co7ACSeK1WWaCGAPAqLaov37Wqdb != null)
 		{
-			this._antiLag._sQE0wot2EaQSiJuOdoBQMHZLdjC(co7ACSeK1WWaCGAPAqLaov37Wqdb);
+			this._antiLag.EditAccountList(co7ACSeK1WWaCGAPAqLaov37Wqdb);
 			return;
 		}
-		_7k8aOfI7MhNrVnHioUXbsPAxkbm 7k8aOfI7MhNrVnHioUXbsPAxkbm = packet as _7k8aOfI7MhNrVnHioUXbsPAxkbm;
+		_7k8aOfI7MhNrVnHioUXbsPAxkbm 7k8aOfI7MhNrVnHioUXbsPAxkbm = packet as EnemyHitPacket;
 		if (7k8aOfI7MhNrVnHioUXbsPAxkbm != null)
 		{
 			this._o3Helper._9BgsXisaUbFFlj5HLRd76sERUUX(7k8aOfI7MhNrVnHioUXbsPAxkbm);
@@ -511,13 +511,13 @@ internal class Client
 	{
 		this._serverConnection = new TcpClient();
 		this._serverConnection.NoDelay = true;
-		string key = Client.ByteArrayToString(hello._xXzOsvNNNch6IVvOFHUSv8Y0L8c);
-		if (hello._xXzOsvNNNch6IVvOFHUSv8Y0L8c.Length != 0 && this.Proxy._15LfsipxJm1I78mh9UGesTHpsVC.ContainsKey(key))
+		string key = Client.ByteArrayToString(hello.Key);
+		if (hello.Key.Length != 0 && this.Proxy.ClientDestinations.ContainsKey(key))
 		{
-			ReconnectPacket u9Kj4tAStSlt3Dcm6rdEl60w8MG = this.Proxy._15LfsipxJm1I78mh9UGesTHpsVC[key];
-			hello._ojOP4UJkvpLb2pFVOLoW9ZfpS9b = u9Kj4tAStSlt3Dcm6rdEl60w8MG.GameId;
-			hello._xXzOsvNNNch6IVvOFHUSv8Y0L8c = u9Kj4tAStSlt3Dcm6rdEl60w8MG.Key;
-			hello._KGn7ld0wsUeBW3EMI4gXwdHM01K = u9Kj4tAStSlt3Dcm6rdEl60w8MG.KeyTime;
+			ReconnectPacket u9Kj4tAStSlt3Dcm6rdEl60w8MG = this.Proxy.ClientDestinations[key];
+			hello.GameId = u9Kj4tAStSlt3Dcm6rdEl60w8MG.GameId;
+			hello.Key = u9Kj4tAStSlt3Dcm6rdEl60w8MG.Key;
+			hello.KeyTime = u9Kj4tAStSlt3Dcm6rdEl60w8MG.KeyTime;
 			this._serverConnection.BeginConnect(u9Kj4tAStSlt3Dcm6rdEl60w8MG.Host, u9Kj4tAStSlt3Dcm6rdEl60w8MG.Port, new AsyncCallback(this.ServerConnected), hello);
 			Console.WriteLine("Client: Restored reconnect info.");
 		}
@@ -549,12 +549,12 @@ internal class Client
 			u9Kj4tAStSlt3Dcm6rdEl60w8MG.Name = reconnect.Name;
 			u9Kj4tAStSlt3Dcm6rdEl60w8MG.State = reconnect.State;
 			string key = Client.ByteArrayToString(reconnect.Key);
-			if (this.Proxy._15LfsipxJm1I78mh9UGesTHpsVC.ContainsKey(key))
+			if (this.Proxy.ClientDestinations.ContainsKey(key))
 			{
 				ReconnectPacket u9Kj4tAStSlt3Dcm6rdEl60w8MG2;
-				this.Proxy._15LfsipxJm1I78mh9UGesTHpsVC.TryRemove(key, out u9Kj4tAStSlt3Dcm6rdEl60w8MG2);
+				this.Proxy.ClientDestinations.TryRemove(key, out u9Kj4tAStSlt3Dcm6rdEl60w8MG2);
 			}
-			this.Proxy._15LfsipxJm1I78mh9UGesTHpsVC.TryAdd(key, u9Kj4tAStSlt3Dcm6rdEl60w8MG);
+			this.Proxy.ClientDestinations.TryAdd(key, u9Kj4tAStSlt3Dcm6rdEl60w8MG);
 			reconnect.Host = "127.0.0.1";
 			reconnect.Port = 2050;
 			Console.WriteLine("Client: Stored reconnect info.");
@@ -728,7 +728,7 @@ ICSharpCode.Decompiler.DecompilerException: Error decompiling System.Void _U5AaP
 	private AntiSpam _antiSpam;
 
 	// Token: 0x0400029C RID: 668
-	private AutoNexus2 _autoNexus2;
+	private AutoAbility _autoNexus2;
 
 	// Token: 0x0400029D RID: 669
 	private AutoLoot _autoLoot;

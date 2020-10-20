@@ -17,7 +17,7 @@ internal static class GameData
 	}
 
 	// Token: 0x04000212 RID: 530
-	public static GameDataMap<ushort, /*ItemStucture*/_66CXgP76qcRM5NMLzlNSbhfhXbG> Items;
+	public static GameDataMap<ushort, /*ItemStucture*/ItemStructure> Items;
 
 	// Token: 0x04000213 RID: 531
 	public static GameDataMap<ushort, TileStructure> Tiles;

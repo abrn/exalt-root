@@ -30,8 +30,8 @@ internal class SafeWalk
 	// Token: 0x0600051A RID: 1306 RVA: 0x0001E638 File Offset: 0x0001C838
 	public void MapInfo(MapInfoPacket mapInfo)
 	{
-		this._x042beur4ZH17DjAMLokZ55nUnB = mapInfo._qj8dhntiHGuupB7WCO6MqhVu9Gk.ToLower().Contains("shatters");
-		this._YDJPnvGydjRtHbTYPWxd7UiJCec = new bool[mapInfo._pCEEx7DVSfoKsVtOFqw3jIq365d * mapInfo._92R8iOIVdqdeKvPcqUJAUojZv04];
+		this._x042beur4ZH17DjAMLokZ55nUnB = mapInfo.DisplayName.ToLower().Contains("shatters");
+		this._YDJPnvGydjRtHbTYPWxd7UiJCec = new bool[mapInfo.Width * mapInfo.Height];
 	}
 
 	// Token: 0x0600051B RID: 1307 RVA: 0x0001E678 File Offset: 0x0001C878
@@ -39,25 +39,25 @@ internal class SafeWalk
 	{
 		foreach (Entity entity in update.NewObjs)
 		{
-			ObjectStructure objectStructure = _JzyrOApzC09RC3fmb10FDURmyCl.Objects.ByID(entity._koPitlGqCPegcnIS2B6efWzp4zO);
+			ObjectStructure objectStructure = _JzyrOApzC09RC3fmb10FDURmyCl.Objects.ByID(entity.ObjectType);
 			if (objectStructure != null && objectStructure.ProtectFromGroundDamage)
 			{
 				this._7SgGAwTfaktiXrT3QCykHV9mnw7((int)entity.Status.Position._MFEyfKFQqtcdaBxZbAOPzXMB8iP, (int)entity.Status.Position._vwAmCOilfBfnOBAh94J77UFd0FV, true);
 			}
 		}
-		_hVYZnKlD1p4NKgHvEIulwTgi91f[] ggcOirasY7xrclnb5yxgWCbeJam = update._ggcOirasY7xrclnb5yxgWCbeJam;
+		Tile[] ggcOirasY7xrclnb5yxgWCbeJam = update.Tiles;
 		for (int i = 0; i < ggcOirasY7xrclnb5yxgWCbeJam.Length; i++)
 		{
 			SafeWalk._g1WDWSAbzyUpKozUw6l3xkhhISDA g1WDWSAbzyUpKozUw6l3xkhhISDA = new SafeWalk._g1WDWSAbzyUpKozUw6l3xkhhISDA();
 			g1WDWSAbzyUpKozUw6l3xkhhISDA._mWe1fQ384BLZe9PnvAln1y7kKo = ggcOirasY7xrclnb5yxgWCbeJam[i];
-			Square q3lhvRoGxDHbe4DHt5QEvG37i6dA = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.TileAt((int)g1WDWSAbzyUpKozUw6l3xkhhISDA._mWe1fQ384BLZe9PnvAln1y7kKo._MFEyfKFQqtcdaBxZbAOPzXMB8iP, (int)g1WDWSAbzyUpKozUw6l3xkhhISDA._mWe1fQ384BLZe9PnvAln1y7kKo._vwAmCOilfBfnOBAh94J77UFd0FV);
-			if (Settings.Default.EnableSafeWalk && (!this._x042beur4ZH17DjAMLokZ55nUnB || Settings.Default.SafeWalkInShatters) && q3lhvRoGxDHbe4DHt5QEvG37i6dA._BcbT5d0qQueJ6Bgm9dZYuz6EnZg.MinDamage > 0 && !this._tNVnGb7wT30wYHlyz5P26VK4N9A((int)g1WDWSAbzyUpKozUw6l3xkhhISDA._mWe1fQ384BLZe9PnvAln1y7kKo._MFEyfKFQqtcdaBxZbAOPzXMB8iP, (int)g1WDWSAbzyUpKozUw6l3xkhhISDA._mWe1fQ384BLZe9PnvAln1y7kKo._vwAmCOilfBfnOBAh94J77UFd0FV))
+			Square q3lhvRoGxDHbe4DHt5QEvG37i6dA = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.TileAt((int)g1WDWSAbzyUpKozUw6l3xkhhISDA._mWe1fQ384BLZe9PnvAln1y7kKo.X, (int)g1WDWSAbzyUpKozUw6l3xkhhISDA._mWe1fQ384BLZe9PnvAln1y7kKo.Y);
+			if (Settings.Default.EnableSafeWalk && (!this._x042beur4ZH17DjAMLokZ55nUnB || Settings.Default.SafeWalkInShatters) && q3lhvRoGxDHbe4DHt5QEvG37i6dA.Tile.MinDamage > 0 && !this._tNVnGb7wT30wYHlyz5P26VK4N9A((int)g1WDWSAbzyUpKozUw6l3xkhhISDA._mWe1fQ384BLZe9PnvAln1y7kKo.X, (int)g1WDWSAbzyUpKozUw6l3xkhhISDA._mWe1fQ384BLZe9PnvAln1y7kKo.Y))
 			{
-				g1WDWSAbzyUpKozUw6l3xkhhISDA._mWe1fQ384BLZe9PnvAln1y7kKo._k9uWQCZd8WqDr6yiKRmrLtst3KX = this._ZxBRntkKcr5OaFN9gyfy49Kgo2C;
+				g1WDWSAbzyUpKozUw6l3xkhhISDA._mWe1fQ384BLZe9PnvAln1y7kKo.Type = this._ZxBRntkKcr5OaFN9gyfy49Kgo2C;
 			}
 			else if (Settings.Default.EnableCustomNexus && this._dTuaCU4AfnCs9pYZeRjpD63NJTo.Any(new Func<TileStructure, bool>(g1WDWSAbzyUpKozUw6l3xkhhISDA._cK3tqcFri6sqAZcZMXo2Hx0C43c)))
 			{
-				g1WDWSAbzyUpKozUw6l3xkhhISDA._mWe1fQ384BLZe9PnvAln1y7kKo._k9uWQCZd8WqDr6yiKRmrLtst3KX = this._z9AeFwUcnW6WFZFN9LXLmHkxRUn._ikFKebqGeYDppnRN94BtlHzztCC<System.UInt16>.ID;
+				g1WDWSAbzyUpKozUw6l3xkhhISDA._mWe1fQ384BLZe9PnvAln1y7kKo.Type = this._z9AeFwUcnW6WFZFN9LXLmHkxRUn._ikFKebqGeYDppnRN94BtlHzztCC<System.UInt16>.ID;
 			}
 		}
 	}
@@ -94,10 +94,10 @@ internal class SafeWalk
 		// Token: 0x0600051D RID: 1309 RVA: 0x0001E7EC File Offset: 0x0001C9EC
 		internal bool _cK3tqcFri6sqAZcZMXo2Hx0C43c(TileStructure type)
 		{
-			return type._ikFKebqGeYDppnRN94BtlHzztCC<System.UInt16>.ID == this._mWe1fQ384BLZe9PnvAln1y7kKo._k9uWQCZd8WqDr6yiKRmrLtst3KX;
+			return type._ikFKebqGeYDppnRN94BtlHzztCC<System.UInt16>.ID == this._mWe1fQ384BLZe9PnvAln1y7kKo.Type;
 		}
 
 		// Token: 0x0400062B RID: 1579
-		public _hVYZnKlD1p4NKgHvEIulwTgi91f _mWe1fQ384BLZe9PnvAln1y7kKo;
+		public Tile _mWe1fQ384BLZe9PnvAln1y7kKo;
 	}
 }

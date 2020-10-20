@@ -17,47 +17,47 @@ internal class UpdatePacket : Packet
 	// Token: 0x06000455 RID: 1109 RVA: 0x000170DC File Offset: 0x000152DC
 	public override void Read(PacketReader r)
 	{
-		this._ggcOirasY7xrclnb5yxgWCbeJam = new _hVYZnKlD1p4NKgHvEIulwTgi91f[_di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r)];
-		for (int i = 0; i < this._ggcOirasY7xrclnb5yxgWCbeJam.Length; i++)
+		this.Tiles = new Tile[CompressedInt.Read(r)];
+		for (int i = 0; i < this.Tiles.Length; i++)
 		{
-			this._ggcOirasY7xrclnb5yxgWCbeJam[i] = (_hVYZnKlD1p4NKgHvEIulwTgi91f)new _hVYZnKlD1p4NKgHvEIulwTgi91f().Read(r);
+			this.Tiles[i] = (Tile)new Tile().Read(r);
 		}
-		this.NewObjs = new Entity[_di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r)];
+		this.NewObjs = new Entity[CompressedInt.Read(r)];
 		for (int j = 0; j < this.NewObjs.Length; j++)
 		{
 			this.NewObjs[j] = (Entity)new Entity().Read(r);
 		}
-		this.Drops = new int[_di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r)];
+		this.Drops = new int[CompressedInt.Read(r)];
 		for (int k = 0; k < this.Drops.Length; k++)
 		{
-			this.Drops[k] = _di3Iyuw9XRVUyJrW7NCBFduCW4H._eHIpo1lHmEGnQwbA8tDvcpJtdfl(r);
+			this.Drops[k] = CompressedInt.Read(r);
 		}
 	}
 
 	// Token: 0x06000456 RID: 1110 RVA: 0x00017194 File Offset: 0x00015394
 	public override void Write(PacketWriter w)
 	{
-		_di3Iyuw9XRVUyJrW7NCBFduCW4H._7A7oILp80mGDmH4Uco8L8vPbaS4(w, this._ggcOirasY7xrclnb5yxgWCbeJam.Length);
-		_hVYZnKlD1p4NKgHvEIulwTgi91f[] ggcOirasY7xrclnb5yxgWCbeJam = this._ggcOirasY7xrclnb5yxgWCbeJam;
+		CompressedInt.Write(w, this.Tiles.Length);
+		Tile[] ggcOirasY7xrclnb5yxgWCbeJam = this.Tiles;
 		for (int i = 0; i < ggcOirasY7xrclnb5yxgWCbeJam.Length; i++)
 		{
 			ggcOirasY7xrclnb5yxgWCbeJam[i].Write(w);
 		}
-		_di3Iyuw9XRVUyJrW7NCBFduCW4H._7A7oILp80mGDmH4Uco8L8vPbaS4(w, this.NewObjs.Length);
+		CompressedInt.Write(w, this.NewObjs.Length);
 		Entity[] jyJGMVpAZL4M3WPGiyvdnxz1cTH = this.NewObjs;
 		for (int i = 0; i < jyJGMVpAZL4M3WPGiyvdnxz1cTH.Length; i++)
 		{
 			jyJGMVpAZL4M3WPGiyvdnxz1cTH[i].Write(w);
 		}
-		_di3Iyuw9XRVUyJrW7NCBFduCW4H._7A7oILp80mGDmH4Uco8L8vPbaS4(w, this.Drops.Length);
+		CompressedInt.Write(w, this.Drops.Length);
 		foreach (int value in this.Drops)
 		{
-			_di3Iyuw9XRVUyJrW7NCBFduCW4H._7A7oILp80mGDmH4Uco8L8vPbaS4(w, value);
+			CompressedInt.Write(w, value);
 		}
 	}
 
 	// Token: 0x04000586 RID: 1414
-	public _hVYZnKlD1p4NKgHvEIulwTgi91f[] _ggcOirasY7xrclnb5yxgWCbeJam;
+	public Tile[] Tiles;
 
 	// Token: 0x04000587 RID: 1415
 	public Entity[] NewObjs;

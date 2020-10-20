@@ -1,15 +1,15 @@
 ﻿using System;
 
 // Token: 0x02000030 RID: 48
-internal class _cw4BmSKJnnKhbzkGsIEJTEJcKKS : IDataObject, ICloneable
+internal class Item : IDataObject, ICloneable
 {
 	// Token: 0x0600026A RID: 618 RVA: 0x00011140 File Offset: 0x0000F340
-	public _cw4BmSKJnnKhbzkGsIEJTEJcKKS()
+	public Item()
 	{
 	}
 
 	// Token: 0x0600026B RID: 619 RVA: 0x00011154 File Offset: 0x0000F354
-	public _cw4BmSKJnnKhbzkGsIEJTEJcKKS(PacketReader r)
+	public Item(PacketReader r)
 	{
 		this._sbrtig45lkNbhXIjOScuimkbxyW = r.ReadInt32();
 		this._nUppUQcAEeCO15B53eSIwjaZ8yK = r.ReadInt32();
@@ -39,7 +39,7 @@ internal class _cw4BmSKJnnKhbzkGsIEJTEJcKKS : IDataObject, ICloneable
 	// Token: 0x0600026E RID: 622 RVA: 0x00011218 File Offset: 0x0000F418
 	public object Clone()
 	{
-		return new _cw4BmSKJnnKhbzkGsIEJTEJcKKS
+		return new Item
 		{
 			_sbrtig45lkNbhXIjOScuimkbxyW = this._sbrtig45lkNbhXIjOScuimkbxyW,
 			_nUppUQcAEeCO15B53eSIwjaZ8yK = this._nUppUQcAEeCO15B53eSIwjaZ8yK,

@@ -17,20 +17,20 @@ internal class PlayerHitPacket : Packet
 	// Token: 0x06000355 RID: 853 RVA: 0x00014588 File Offset: 0x00012788
 	public override void Read(PacketReader r)
 	{
-		this._0v4mmgyFOmt9eSc23UclkqyBncC = r.ReadByte();
-		this._605Ligxeaj9k9kBV8zQhhFhgTGl = r.ReadInt32();
+		this.BulletId = r.ReadByte();
+		this.ObjectId = r.ReadInt32();
 	}
 
 	// Token: 0x06000356 RID: 854 RVA: 0x000145B0 File Offset: 0x000127B0
 	public override void Write(PacketWriter w)
 	{
-		w.Write(this._0v4mmgyFOmt9eSc23UclkqyBncC);
-		w.Write(this._605Ligxeaj9k9kBV8zQhhFhgTGl);
+		w.Write(this.BulletId);
+		w.Write(this.ObjectId);
 	}
 
 	// Token: 0x040004B3 RID: 1203
-	public byte _0v4mmgyFOmt9eSc23UclkqyBncC;
+	public byte BulletId;
 
 	// Token: 0x040004B4 RID: 1204
-	public int _605Ligxeaj9k9kBV8zQhhFhgTGl;
+	public int ObjectId;
 }

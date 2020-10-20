@@ -100,7 +100,7 @@ internal partial class _O8RCBX441Egsj4ff5BOJx95ggk8 : Form
 			int id = m.WParam.ToInt32();
 			int num2;
 			_IHUllfO6Rr4ri1gTkx9LNb4zz7B.GetWindowThreadProcessId(_IHUllfO6Rr4ri1gTkx9LNb4zz7B.GetForegroundWindow(), out num2);
-			this._Dm8uy44VjdFaIzNrCEi9uYdmSKl._TDrFXcTAjgN5GbHg6KToDxTmgfK(id);
+			this._Dm8uy44VjdFaIzNrCEi9uYdmSKl.FireHotkeyPressed(id);
 		}
 	}
 
@@ -244,7 +244,7 @@ internal partial class _O8RCBX441Egsj4ff5BOJx95ggk8 : Form
 			Console.WriteLine("System: Initializing proxy...");
 			_JzyrOApzC09RC3fmb10FDURmyCl._gKKd0PApBLw4Hl4Oj4Z6UarwYVc();
 			ServerParser.Parse();
-			this._Dm8uy44VjdFaIzNrCEi9uYdmSKl._eF71c6Wm9DMjCayXZwHo3e5aDoP();
+			this._Dm8uy44VjdFaIzNrCEi9uYdmSKl.Start();
 		}
 		catch (Exception ex)
 		{

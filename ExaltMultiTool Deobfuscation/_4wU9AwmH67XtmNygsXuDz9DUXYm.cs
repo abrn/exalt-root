@@ -18,12 +18,12 @@ internal class _4wU9AwmH67XtmNygsXuDz9DUXYm : Packet
 	// Token: 0x060003B1 RID: 945 RVA: 0x000150E0 File Offset: 0x000132E0
 	public override void Read(PacketReader r)
 	{
-		this._GNsbx2sQjKyCD4qK29hWl8cxeSqA = r.ReadInt32();
+		this.TargetId = r.ReadInt32();
 		byte b = r.ReadByte();
-		this._xRou6pLb1OAINZAI0Yki8s1brKc = (_FxW3cpBIUZT3nuKFOJfwHOThAq7)0;
+		this._xRou6pLb1OAINZAI0Yki8s1brKc = (ConditionEffects)0;
 		for (int i = 0; i < (int)b; i++)
 		{
-			this._xRou6pLb1OAINZAI0Yki8s1brKc |= (_FxW3cpBIUZT3nuKFOJfwHOThAq7)(1 << (int)r.ReadByte());
+			this._xRou6pLb1OAINZAI0Yki8s1brKc |= (ConditionEffects)(1 << (int)r.ReadByte());
 		}
 		this._Q1PiJQ99KBCJeLcZ0HOk3AUAjIP = r.ReadUInt16();
 		this._M3PGxU4nNuXDsBnmxkUUzv2UADh = r.ReadByte();
@@ -31,17 +31,17 @@ internal class _4wU9AwmH67XtmNygsXuDz9DUXYm : Packet
 		this._cOOwLggepjcumTMmHiNjo8G61wH = ((this._M3PGxU4nNuXDsBnmxkUUzv2UADh & 2) > 0);
 		this._cvRdSzlVcAcxDFt0A1VEPQuZ9r = ((this._M3PGxU4nNuXDsBnmxkUUzv2UADh & 4) > 0);
 		this._0v4mmgyFOmt9eSc23UclkqyBncC = r.ReadByte();
-		this._605Ligxeaj9k9kBV8zQhhFhgTGl = r.ReadInt32();
+		this.ObjectId = r.ReadInt32();
 	}
 
 	// Token: 0x060003B2 RID: 946 RVA: 0x00015190 File Offset: 0x00013390
 	public override void Write(PacketWriter w)
 	{
-		w.Write(this._GNsbx2sQjKyCD4qK29hWl8cxeSqA);
+		w.Write(this.TargetId);
 		List<byte> list = new List<byte>();
 		for (byte b = 1; b < 255; b += 1)
 		{
-			if ((this._xRou6pLb1OAINZAI0Yki8s1brKc & (_FxW3cpBIUZT3nuKFOJfwHOThAq7)(1 << (int)b)) != (_FxW3cpBIUZT3nuKFOJfwHOThAq7)0)
+			if ((this._xRou6pLb1OAINZAI0Yki8s1brKc & (ConditionEffects)(1 << (int)b)) != (ConditionEffects)0)
 			{
 				list.Add(b);
 			}
@@ -54,7 +54,7 @@ internal class _4wU9AwmH67XtmNygsXuDz9DUXYm : Packet
 		w.Write(this._Q1PiJQ99KBCJeLcZ0HOk3AUAjIP);
 		w.Write(this._M3PGxU4nNuXDsBnmxkUUzv2UADh);
 		w.Write(this._0v4mmgyFOmt9eSc23UclkqyBncC);
-		w.Write(this._605Ligxeaj9k9kBV8zQhhFhgTGl);
+		w.Write(this.ObjectId);
 	}
 
 	// Token: 0x040004E8 RID: 1256
@@ -67,10 +67,10 @@ internal class _4wU9AwmH67XtmNygsXuDz9DUXYm : Packet
 	private const int _YfrhiknsMbdgnAQqv8oIvyoqPaB = 4;
 
 	// Token: 0x040004EB RID: 1259
-	public int _GNsbx2sQjKyCD4qK29hWl8cxeSqA;
+	public int TargetId;
 
 	// Token: 0x040004EC RID: 1260
-	public _FxW3cpBIUZT3nuKFOJfwHOThAq7 _xRou6pLb1OAINZAI0Yki8s1brKc;
+	public ConditionEffects _xRou6pLb1OAINZAI0Yki8s1brKc;
 
 	// Token: 0x040004ED RID: 1261
 	public ushort _Q1PiJQ99KBCJeLcZ0HOk3AUAjIP;
@@ -91,5 +91,5 @@ internal class _4wU9AwmH67XtmNygsXuDz9DUXYm : Packet
 	public byte _0v4mmgyFOmt9eSc23UclkqyBncC;
 
 	// Token: 0x040004F3 RID: 1267
-	public int _605Ligxeaj9k9kBV8zQhhFhgTGl;
+	public int ObjectId;
 }

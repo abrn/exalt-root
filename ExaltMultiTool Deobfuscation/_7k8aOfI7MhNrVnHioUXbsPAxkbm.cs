@@ -2,7 +2,7 @@
 using ExaltMultiTool.Proxy.Networking.Packets;
 
 // Token: 0x0200004E RID: 78
-internal class _7k8aOfI7MhNrVnHioUXbsPAxkbm : Packet
+internal class EnemyHitPacket : Packet
 {
 	// Token: 0x170000E7 RID: 231
 	// (get) Token: 0x0600030C RID: 780 RVA: 0x00013B94 File Offset: 0x00011D94

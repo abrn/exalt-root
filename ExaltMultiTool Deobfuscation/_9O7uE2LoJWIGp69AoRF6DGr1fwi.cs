@@ -7,7 +7,7 @@ internal class ShowRealLHPot
 	// Token: 0x060004E6 RID: 1254 RVA: 0x0001C6F4 File Offset: 0x0001A8F4
 	public void MapInfo(MapInfoPacket mapInfo)
 	{
-		this._3bR5NUnBT3Ocs8nEIqQNVvq5khI = (mapInfo._Jp3DtIV4aAYZY26sVsXpPQjBRGO == "Lost Halls");
+		this._3bR5NUnBT3Ocs8nEIqQNVvq5khI = (mapInfo.Name == "Lost Halls");
 	}
 
 	// Token: 0x060004E7 RID: 1255 RVA: 0x0001C718 File Offset: 0x0001A918
@@ -23,7 +23,7 @@ internal class ShowRealLHPot
 		}
 		foreach (Entity eTOyUHUGABMgTlUf3FUyHRn1uVv in update.NewObjs)
 		{
-			if (eTOyUHUGABMgTlUf3FUyHRn1uVv._koPitlGqCPegcnIS2B6efWzp4zO >= 45239 && eTOyUHUGABMgTlUf3FUyHRn1uVv._koPitlGqCPegcnIS2B6efWzp4zO <= 45243)
+			if (eTOyUHUGABMgTlUf3FUyHRn1uVv.ObjectType >= 45239 && eTOyUHUGABMgTlUf3FUyHRn1uVv.ObjectType <= 45243)
 			{
 				this._gwQbCyGjOqugc22uFkNNeJgLuvV(eTOyUHUGABMgTlUf3FUyHRn1uVv.Status);
 			}
@@ -35,7 +35,7 @@ internal class ShowRealLHPot
 	{
 		foreach (StatData eawaZQvtvbptP3yFgHw8DNBicDZ in status.Data)
 		{
-			if (!StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType._l5HAIp8OEZRguJkIVcZQDtTd8ME))
+			if (!StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType.Size))
 			{
 				eawaZQvtvbptP3yFgHw8DNBicDZ.IntValue = 200;
 				break;
