@@ -70,7 +70,7 @@ internal class IpJoin
 		TextPacket textPacket = (TextPacket)Packet.Create(PacketType.TEXT);
 		textPacket.CleanText = text;
 		textPacket.Text = textPacket.CleanText;
-		textPacket.ObjectId = -1;
+		textPacket.NumStars = -1;
 		textPacket.Name = "";
 		textPacket.Recipient = "";
 		this.client.SendToClient(textPacket);

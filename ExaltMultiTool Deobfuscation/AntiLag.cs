@@ -90,7 +90,7 @@ internal class AntiLag
 		{
 			return;
 		}
-		if (text.ObjectId == -1)
+		if (text.NumStars == -1)
 		{
 			if (text.Recipient == "*Guild*" && text.Text.Contains(this.client.Player.Guild))
 			{

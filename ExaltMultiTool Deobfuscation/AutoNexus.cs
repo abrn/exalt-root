@@ -14,23 +14,6 @@ internal class AutoNexus
 	// Token: 0x060004AD RID: 1197 RVA: 0x0001A78C File Offset: 0x0001898C
 	public AutoNexus(Client client)
 	{
-		/*
-An exception occurred when decompiling this method (060004AD)
-
-ICSharpCode.Decompiler.DecompilerException: Error decompiling System.Void _aSSd955fs9kacOxwGT4nziQrpZD::.ctor(_U5AaPl8DapnIJVdc80Ay29WdWR4)
- ---> System.ArgumentOutOfRangeException: Non-negative number required.
-Parameter name: length
-   at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
-   at System.Array.Copy(Array sourceArray, Array destinationArray, Int32 length)
-   at ICSharpCode.Decompiler.ILAst.ILAstBuilder.StackSlot.ModifyStack(StackSlot[] stack, Int32 popCount, Int32 pushCount, ByteCode pushDefinition) in C:\projects\dnspy\Extensions\ILSpy.Decompiler\ICSharpCode.Decompiler\ICSharpCode.Decompiler\ILAst\ILAstBuilder.cs:line 49
-   at ICSharpCode.Decompiler.ILAst.ILAstBuilder.StackAnalysis(MethodDef methodDef) in C:\projects\dnspy\Extensions\ILSpy.Decompiler\ICSharpCode.Decompiler\ICSharpCode.Decompiler\ILAst\ILAstBuilder.cs:line 387
-   at ICSharpCode.Decompiler.ILAst.ILAstBuilder.Build(MethodDef methodDef, Boolean optimize, DecompilerContext context) in C:\projects\dnspy\Extensions\ILSpy.Decompiler\ICSharpCode.Decompiler\ICSharpCode.Decompiler\ILAst\ILAstBuilder.cs:line 269
-   at ICSharpCode.Decompiler.Ast.AstMethodBodyBuilder.CreateMethodBody(IEnumerable`1 parameters, MethodDebugInfoBuilder& builder) in C:\projects\dnspy\Extensions\ILSpy.Decompiler\ICSharpCode.Decompiler\ICSharpCode.Decompiler\Ast\AstMethodBodyBuilder.cs:line 112
-   at ICSharpCode.Decompiler.Ast.AstMethodBodyBuilder.CreateMethodBody(MethodDef methodDef, DecompilerContext context, AutoPropertyProvider autoPropertyProvider, IEnumerable`1 parameters, Boolean valueParameterIsKeyword, StringBuilder sb, MethodDebugInfoBuilder& stmtsBuilder) in C:\projects\dnspy\Extensions\ILSpy.Decompiler\ICSharpCode.Decompiler\ICSharpCode.Decompiler\Ast\AstMethodBodyBuilder.cs:line 88
-   --- End of inner exception stack trace ---
-   at ICSharpCode.Decompiler.Ast.AstMethodBodyBuilder.CreateMethodBody(MethodDef methodDef, DecompilerContext context, AutoPropertyProvider autoPropertyProvider, IEnumerable`1 parameters, Boolean valueParameterIsKeyword, StringBuilder sb, MethodDebugInfoBuilder& stmtsBuilder) in C:\projects\dnspy\Extensions\ILSpy.Decompiler\ICSharpCode.Decompiler\ICSharpCode.Decompiler\Ast\AstMethodBodyBuilder.cs:line 92
-   at ICSharpCode.Decompiler.Ast.AstBuilder.AddMethodBody(EntityDeclaration methodNode, EntityDeclaration& updatedNode, MethodDef method, IEnumerable`1 parameters, Boolean valueParameterIsKeyword, MethodKind methodKind) in C:\projects\dnspy\Extensions\ILSpy.Decompiler\ICSharpCode.Decompiler\ICSharpCode.Decompiler\Ast\AstBuilder.cs:line 1545
-*/;
 	}
 
 	// Token: 0x060004AE RID: 1198 RVA: 0x0001A8C8 File Offset: 0x00018AC8
@@ -144,9 +127,9 @@ Parameter name: length
 			}
 			else if (!StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType._DVNBi2eQHLdmlmNyYH05WDcfCzq))
 			{
-				if (!StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType._idaesRih3T62YKfF1b0nKNMOdlo))
+				if (!StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType.Inventory1))
 				{
-					if (StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType._a19Kww8XtLvH56Cl4ErqzYwACOr))
+					if (StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType.HealthBonus))
 					{
 						flag = true;
 					}
@@ -439,11 +422,6 @@ Parameter name: length
 	{
 		bool flag = false;
 		int[] array = new int[0];
-		if (!Settings.Default.EnableFameTools || !Settings.Default.FameBlockDrinking)
-		{
-			array = this._az4aUkfyP652xNBNBUt1QS1BtYi(this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._50Ms1zsqax9Ua48PaWMPQfIENYb._myJxXFJcH1zIBkZMmXfDOvAh0vcA);
-			flag = (array.Length == 2);
-		}
 		if (!flag && this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._50Ms1zsqax9Ua48PaWMPQfIENYb._r4Xq85xV6nMTyHoC0hk90XNlu5q > 0)
 		{
 			array = new int[]
@@ -458,60 +436,6 @@ Parameter name: length
 			this._sOwc8Hz5GYPFJ7BLvgRX72MvmaK(time, array[0], (byte)array[1], whereabouts);
 			this._r67gu1of1w1RIgPZODUlQX7QMJD = time;
 		}
-	}
-
-	// Token: 0x060004C1 RID: 1217 RVA: 0x0001B524 File Offset: 0x00019724
-	private int[] _az4aUkfyP652xNBNBUt1QS1BtYi(int[] playerInventory)
-	{
-		ushort[] source = new ushort[]
-		{
-			8779,
-			8798,
-			8795,
-			8780,
-			8764,
-			8765,
-			2736
-		};
-		int num = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf._50Ms1zsqax9Ua48PaWMPQfIENYb._i1wpxbN1B15L7vPjaWvObujwWOB ? 20 : 12;
-		if (Settings.Default.AutoNexusDrinkFromInventory)
-		{
-			for (int i = 4; i < num; i++)
-			{
-				if (playerInventory[i] == 2594)
-				{
-					return new int[]
-					{
-						2594,
-						i
-					};
-				}
-			}
-			return new int[0];
-		}
-		for (int j = 4; j < num; j++)
-		{
-			int num2 = playerInventory[j];
-			if (num2 != -1)
-			{
-				if (!source.Contains((ushort)num2))
-				{
-					_66CXgP76qcRM5NMLzlNSbhfhXbG 66CXgP76qcRM5NMLzlNSbhfhXbG = _JzyrOApzC09RC3fmb10FDURmyCl.Items.ByID((ushort)num2);
-					if (66CXgP76qcRM5NMLzlNSbhfhXbG != null && 66CXgP76qcRM5NMLzlNSbhfhXbG._OXia9YzoHauuO4pwLRh46SjGQeh && 66CXgP76qcRM5NMLzlNSbhfhXbG._dHPNoGlmrfb0cl4aaEGpRxXcgRw.Count != 0)
-					{
-						if (66CXgP76qcRM5NMLzlNSbhfhXbG._dHPNoGlmrfb0cl4aaEGpRxXcgRw.Where(new Func<Activate, bool>(AutoNexus._COGac3v2Ltj2Rm61nUs1anvxYmd.<>9._BtCpICxZUD14Y9ob2aTTpGXgwGM)).Where(new Func<Activate, bool>(AutoNexus._COGac3v2Ltj2Rm61nUs1anvxYmd.<>9._PoMZS1TIek23FTr8kGDUp3DmApF)).Any<Activate>())
-						{
-							return new int[]
-							{
-								(int)66CXgP76qcRM5NMLzlNSbhfhXbG._X5iK7DxZXqEuFaG5vPlQc32oVuG,
-								j
-							};
-						}
-					}
-				}
-			}
-		}
-		return new int[0];
 	}
 
 	// Token: 0x060004C2 RID: 1218 RVA: 0x0001B668 File Offset: 0x00019868

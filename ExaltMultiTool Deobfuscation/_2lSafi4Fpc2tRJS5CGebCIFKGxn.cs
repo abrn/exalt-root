@@ -17,7 +17,7 @@ internal class AntiSpam
 	public void _IDtpCgDjmC1AQOcZCJSFNAYjlbH(TextPacket text)
 	{
 		AntiSpam._NALkTCRxB8Bckmseeqnv7i0kCyI nalkTCRxB8Bckmseeqnv7i0kCyI = new AntiSpam._NALkTCRxB8Bckmseeqnv7i0kCyI();
-		if (text.ObjectId < 0)
+		if (text.NumStars < 0)
 		{
 			return;
 		}

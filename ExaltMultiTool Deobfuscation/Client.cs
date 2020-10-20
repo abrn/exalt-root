@@ -436,7 +436,7 @@ internal class Client
 			this._fameHelper.UseItem(lylWoxWrca2h31SiYiDb8gyQP0o);
 			return;
 		}
-		_CBWrHXLbrCktla3qkqXNmNymbvH cbwrHXLbrCktla3qkqXNmNymbvH = packet as _CBWrHXLbrCktla3qkqXNmNymbvH;
+		EnemyShootPacket cbwrHXLbrCktla3qkqXNmNymbvH = packet as EnemyShootPacket;
 		if (cbwrHXLbrCktla3qkqXNmNymbvH != null)
 		{
 			this._objectTracker._Qz49aY7UXgmnBNNMA6Q6IEQtadk(cbwrHXLbrCktla3qkqXNmNymbvH);

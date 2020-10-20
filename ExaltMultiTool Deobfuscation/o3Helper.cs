@@ -164,7 +164,7 @@ internal class o3Helper
 	{
 		foreach (StatData eawaZQvtvbptP3yFgHw8DNBicDZ in status.Data)
 		{
-			if (!StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType._IETqTFGc9287W3IAM0SiEryfzal))
+			if (!StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType.AltTextureIndex))
 			{
 				this._DvFI4lAdBcrOLNGKR4DD0txYDzE = this._TAIsGGDN1hlbWv5A5WT7T4CvbcB.Contains(eawaZQvtvbptP3yFgHw8DNBicDZ.IntValue);
 				Console.WriteLine(string.Format("Oryx shielding: {0} (alt texture id {1})", this._DvFI4lAdBcrOLNGKR4DD0txYDzE, eawaZQvtvbptP3yFgHw8DNBicDZ.IntValue));
@@ -180,7 +180,7 @@ internal class o3Helper
 		{
 			return;
 		}
-		if (text.ObjectId > -1)
+		if (text.NumStars > -1)
 		{
 			return;
 		}

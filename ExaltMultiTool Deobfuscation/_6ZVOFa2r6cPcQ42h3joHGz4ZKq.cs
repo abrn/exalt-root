@@ -81,7 +81,7 @@ internal class ObjectTracker
 						while (enumerator.MoveNext())
 						{
 							StatData eawaZQvtvbptP3yFgHw8DNBicDZ = enumerator.Current;
-							if (StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType._jQToCmezajoMkD7AWz3F9w0fiQJ))
+							if (StatsType.Id(eawaZQvtvbptP3yFgHw8DNBicDZ.Id, StatsType.Glowing))
 							{
 								eawaZQvtvbptP3yFgHw8DNBicDZ.IntValue = 100;
 								break;
@@ -152,13 +152,13 @@ internal class ObjectTracker
 	}
 
 	// Token: 0x0600050F RID: 1295 RVA: 0x0001E18C File Offset: 0x0001C38C
-	public void _Qz49aY7UXgmnBNNMA6Q6IEQtadk(_CBWrHXLbrCktla3qkqXNmNymbvH enemyShoot)
+	public void _Qz49aY7UXgmnBNNMA6Q6IEQtadk(EnemyShootPacket enemyShoot)
 	{
-		if (!this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Objects.ContainsKey(enemyShoot._o1vIAcFEkLsw697hhlSgXnC4w9g))
+		if (!this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Objects.ContainsKey(enemyShoot.OwnerId))
 		{
 			return;
 		}
-		GameObject dbvvb43n9c5uNQ7JklPD1fnCEnv = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Objects[enemyShoot._o1vIAcFEkLsw697hhlSgXnC4w9g];
+		GameObject dbvvb43n9c5uNQ7JklPD1fnCEnv = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.Objects[enemyShoot.OwnerId];
 		if (!Projectile.ObjectTypeToProjectileIdStructureMap.ContainsKey((int)dbvvb43n9c5uNQ7JklPD1fnCEnv.ObjectType))
 		{
 			Console.WriteLine(string.Concat(new string[]
@@ -172,27 +172,27 @@ internal class ObjectTracker
 			return;
 		}
         Dictionary<byte, ExaltMultiTool.Proxy.DataStructures.ProjectileStructure> dictionary = Projectile.ObjectTypeToProjectileIdStructureMap[(int)dbvvb43n9c5uNQ7JklPD1fnCEnv.ObjectType];
-		if (dictionary.ContainsKey(enemyShoot._U7AZyGcFQm4AJLAEAuhbwgnobvG))
+		if (dictionary.ContainsKey(enemyShoot.BulletType))
 		{
 			Dictionary<int, Projectile> dictionary2;
-			if (!this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.projectiles.ContainsKey(enemyShoot._o1vIAcFEkLsw697hhlSgXnC4w9g))
+			if (!this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.projectiles.ContainsKey(enemyShoot.OwnerId))
 			{
 				dictionary2 = new Dictionary<int, Projectile>();
-				this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.projectiles.Add(enemyShoot._o1vIAcFEkLsw697hhlSgXnC4w9g, dictionary2);
+				this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.projectiles.Add(enemyShoot.OwnerId, dictionary2);
 			}
 			else
 			{
-				dictionary2 = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.projectiles[enemyShoot._o1vIAcFEkLsw697hhlSgXnC4w9g];
+				dictionary2 = this._W6Ov6AArxzTTDnCyBtZPqkqNaKf.projectiles[enemyShoot.OwnerId];
 			}
-            ExaltMultiTool.Proxy.DataStructures.ProjectileStructure structure = dictionary[enemyShoot._U7AZyGcFQm4AJLAEAuhbwgnobvG];
-			for (int i = 0; i < (int)enemyShoot._iJYXKz0RNaSBkr15qJpRokSEGeT; i++)
+            ExaltMultiTool.Proxy.DataStructures.ProjectileStructure structure = dictionary[enemyShoot.BulletType];
+			for (int i = 0; i < (int)enemyShoot.NumShots; i++)
 			{
-				byte b = (byte)(((int)enemyShoot._0v4mmgyFOmt9eSc23UclkqyBncC + i) % 256);
+				byte b = (byte)(((int)enemyShoot.BulletId + i) % 256);
 				Projectile value = default(Projectile);
 				value.Id = b;
-				value.OwnerId = enemyShoot._o1vIAcFEkLsw697hhlSgXnC4w9g;
-				value.Damage = (int)enemyShoot._Q1PiJQ99KBCJeLcZ0HOk3AUAjIP;
-				value.ProjectileType = enemyShoot._U7AZyGcFQm4AJLAEAuhbwgnobvG;
+				value.OwnerId = enemyShoot.OwnerId;
+				value.Damage = (int)enemyShoot.Damage;
+				value.ProjectileType = enemyShoot.BulletType;
 				value.Structure = structure;
 				if (dictionary2.ContainsKey((int)b))
 				{
